@@ -1,11 +1,9 @@
-##
 # makefile
-##
 # John Van Note
 # 2016-01-09
-##
+#
 # Resume makefile
-##
+#
 
 .SILENT: clean compile test run resume view
 
