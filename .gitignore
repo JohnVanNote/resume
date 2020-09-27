@@ -4,6 +4,7 @@ target/
 *.swp
 .idea
 *.class
+example_resume.pdf
 
 # Created by https://www.gitignore.io/api/latex
 

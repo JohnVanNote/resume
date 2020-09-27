@@ -13,6 +13,9 @@
     "email" : "johnlvannote@protonmail.com",
     "website" : "https://github.com/JohnVanNote"
   },
+  "summarySection" : {
+    "summary" : "John Van Note is a Senior Software Engineer in the Consulting practice of Ernst \\& Young LLP. He has over 5 years of experience in cyber security and software development, architecture, and design. Over the past 3 years, he has focused on the implementation of Identity and Access Management (IAM) solutions including large migrations of Identity Governance andAdministration (IGA) platforms."
+  },
   "experienceSection" : {
     "experiences" : [
       {
@@ -34,11 +37,11 @@
         },
         "technologyUsed" : [
           "Java",
-          "Apache Tomcat",
-          "SQL",
-          "Vagrant",
-          "Git",
           "Jenkins",
+          "Vagrant/VirtualBox",
+          "Git/SVN",
+          "Docker",
+          "Bash/Shell Scripting",
           "AWS"
         ],
         "highlights" : [

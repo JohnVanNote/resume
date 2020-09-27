@@ -1,5 +1,6 @@
 #set( $personal = ${resume.personalSection} )
 #set( $address = ${personal.address} )
+#set( $summary = ${resume.summarySection.summary} )
 #set( $experiences = ${resume.experienceSection.experiences} )
 #set( $schools = ${resume.educationSection.schools} )
 #set( $toolSet = ${resume.technicalSection.toolSet} )
@@ -61,6 +62,9 @@
 \begin{document}
 %-----       resume       ---------------------------------------------------------
 \makecvtitle
+
+\section{${resume.summarySection.title}}
+\cvitem{}{$summary}
 
 \section{${resume.experienceSection.title}}
 #foreach ( $experience in $experiences )
