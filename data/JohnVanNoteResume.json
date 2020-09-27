@@ -4,7 +4,7 @@
     "lastName" : "Van Note",
     "address" : {
       "street" : "800 P St. NW",
-      "additionalStreet" : "Apt.620",
+      "additionalStreet" : "Apt. 620",
       "city" : "Washington",
       "state" : "DC",
       "zip" : "20001"
