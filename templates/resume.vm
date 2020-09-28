@@ -86,7 +86,7 @@
 
 \section{${resume.technicalSection.title}}
 #foreach ( $tools in $toolSet )
-\cvlistitem{\textbf{${tools.label}}:#foreach ( $tool in ${tools.tools} ) $tool#if( $foreach.hasNext ),#else.#end#end}
+\cvlistitem{\textbf{${tools.label}}:#foreach ( $tool in ${tools.tools} ) $tool#if( $foreach.hasNext ),#else#end#end}
 #end
 
 \end{document}
