@@ -19,7 +19,7 @@
   "experienceSection" : {
     "experiences" : [
       {
-        "title" : "Senior Software Engineer, Identity \\& Access Management",
+        "title" : "Senior Software Engineer",
         "tenure" : {
           "startDate" : {
             "year" : 2017,
@@ -41,14 +41,19 @@
           "Vagrant/VirtualBox",
           "Git/SVN",
           "Docker",
-          "Bash/Shell Scripting",
+          "Bash/Shell",
           "AWS"
         ],
         "highlights" : [
-          "Led the design and development of complex integrations with third-party Identity \\& Access Management (IAM) solutions. This was coded primarily in Java using TestNG/EasyMock for unit testing, and Vagrant/Docker for integration testing.",
-          "Designed the high-level architecture for a resume parsing application, following a model-view-controller (MVC) design pattern. The application leveraged ReactJS for the front end, Spring Boot for the business logic, ElasticSearch for data storage, and Jenkins for build automation.",
-          "Implemented practice-wide code standardization practices including automation, code review methodology, telemetry, and test procedures.",
-          "Mentored and trained over twenty junior software developers including entry-level and experienced hires."
+          "Led the technical implementation of an IGA platform leveraging SailPoint IdentityIQ (IIQ) across multiple clients in the retail, housing, pharmaceutical, and insurance industries.",
+          "Designed the migration of custom business processes such as Lifecycle Event Management (LCM), account creation, and access management, including using the feature flag software development technique to decouple the deployment of functionality from its release.",
+          "Automated the deployment and upgrade processes using a Jenkins pipeline for continuous integration and Artifactory for artifact management encouraging shorter deployment timelines to deploy smaller software changes with more resiliency.",
+          "Drove the adoption of a team-wide unit testing framework, leveraging the TestNG and EasyMock testing frameworks, to reduce code duplication and improve confidence in refactoring and bug fixing.",
+          "Designed the high-level architecture for a resume parsing application, following a model-view-controller (MVC) design pattern that leveraged ReactJS for the front end, Spring Boot for the business logic, ElasticSearch for data storage, and Jenkins for build automation.",
+          "Managed multiple workstreams via a release and feature branching model leveraging git for distributed version-control.",
+          "Contributor to a series of EY internal development projects, primarily responsible for code maintenance, developing enhancements, unit testing coverage, and code reviews of new features.",
+          "Provided training to over 70 consultants via the EY internal training program by providing guidance and participating in code reviews.",
+          "Integrated IIQ with several down stream systems, including: 389 Directory Server, Active Directory, ADLDS, CA Top Secret, IBM System i, Microsoft SQL Server Database (JDBC), MySQL Server Database (JDBC), Okta, Oracle Database (JDBC), RACF, SAP BusinessObjects, SAP ERP, SAP Portal, SAP SRM, Workday, and various RESTful web services."
         ]
       },
       {
@@ -74,7 +79,7 @@
         "technologyUsed" : [
           "Java/Groovy",
           "Python",
-          "BASH",
+          "Bash/Shell",
           "Apache HTTP Server",
           "Apache Tomcat",
           "IIS",
@@ -84,11 +89,10 @@
           "VirtualBox"
         ],
         "highlights" : [
-          "Designed and developed a Groovy application, which automated a previously manually-compiled monthly application performance index. The application aggregated data from multiple reporting tools leveraging the Splunk SDK for Java and reading from an Oracle 11g database backend.",
-          "Engineered and supported the implementation of enterprise ETL and Business Intelligence Reporting tools across four environments, spanning more than fourteen application servers. Participated in planning, configuration, and troubleshooting of all server-side decisions.",
+          "Designed and developed a Groovy application, which automated a previously manually-compiled monthly application performance index leveraging the Splunk SDK for Java and reading from an Oracle database backend.",
+          "Engineered and supported the implementation of enterprise ETL and Business Intelligence Reporting tools across four environments, spanning more than fourteen application servers.",
           "Automated reporting processes using VBA, which parsed data and generated charts in Microsoft Excel with a single click as opposed to a manual process.",
-          "Developed a solution to remediate application latency in an Apache Tomcat application by creating an extensible custom Python library to execute BASH commands on Linux servers. ",
-          "Authored a variety of BASH scripts to common Linux/Solaris server issues."
+          "Developed a solution to remediate application latency in an Apache Tomcat application by creating an extensible custom Python library to execute Shell commands on Linux servers. "
         ]
       }
     ],
@@ -130,7 +134,7 @@
           "Groovy",
           "Python",
           "C/C++",
-          "BASH",
+          "Bash/Shell",
           "VBA",
           "JavaScript",
           "PowerShell"

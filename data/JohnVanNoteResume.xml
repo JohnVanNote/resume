@@ -4,7 +4,7 @@
     <lastName>Van Note</lastName>
     <address>
       <street>800 P St. NW</street>
-      <additionalStreet>Apt.620</additionalStreet>
+      <additionalStreet>Apt. 620</additionalStreet>
       <city>Washington</city>
       <state>DC</state>
       <zip>20001</zip>
@@ -20,7 +20,7 @@
   <experienceSection>
     <experiences>
       <experiences>
-        <title>Senior Software Engineer, Identity \&amp; Access Management</title>
+        <title>Senior Software Engineer</title>
         <tenure>
           <startDate>
             <year>2017</year>
@@ -42,14 +42,19 @@
           <technologyUsed>Vagrant/VirtualBox</technologyUsed>
           <technologyUsed>Git/SVN</technologyUsed>
           <technologyUsed>Docker</technologyUsed>
-          <technologyUsed>Bash/Shell Scripting</technologyUsed>
+          <technologyUsed>Bash/Shell</technologyUsed>
           <technologyUsed>AWS</technologyUsed>
         </technologyUsed>
         <highlights>
-          <highlights>Led the design and development of complex integrations with third-party Identity \&amp; Access Management (IAM) solutions. This was coded primarily in Java using TestNG/EasyMock for unit testing, and Vagrant/Docker for integration testing.</highlights>
-          <highlights>Designed the high-level architecture for a resume parsing application, following a model-view-controller (MVC) design pattern. The application leveraged ReactJS for the front end, Spring Boot for the business logic, ElasticSearch for data storage, and Jenkins for build automation.</highlights>
-          <highlights>Implemented practice-wide code standardization practices including automation, code review methodology, telemetry, and test procedures.</highlights>
-          <highlights>Mentored and trained over twenty junior software developers including entry-level and experienced hires.</highlights>
+          <highlights>Led the technical implementation of an IGA platform leveraging SailPoint IdentityIQ (IIQ) across multiple clients in the retail, housing, pharmaceutical, and insurance industries.</highlights>
+          <highlights>Designed the migration of custom business processes such as Lifecycle Event Management (LCM), account creation, and access management, including using the feature flag software development technique to decouple the deployment of functionality from its release.</highlights>
+          <highlights>Automated the deployment and upgrade processes using a Jenkins pipeline for continuous integration and Artifactory for artifact management encouraging shorter deployment timelines to deploy smaller software changes with more resiliency.</highlights>
+          <highlights>Drove the adoption of a team-wide unit testing framework, leveraging the TestNG and EasyMock testing frameworks, to reduce code duplication and improve confidence in refactoring and bug fixing.</highlights>
+          <highlights>Designed the high-level architecture for a resume parsing application, following a model-view-controller (MVC) design pattern that leveraged ReactJS for the front end, Spring Boot for the business logic, ElasticSearch for data storage, and Jenkins for build automation.</highlights>
+          <highlights>Managed multiple workstreams via a release and feature branching model leveraging git for distributed version-control.</highlights>
+          <highlights>Contributor to a series of EY internal development projects, primarily responsible for code maintenance, developing enhancements, unit testing coverage, and code reviews of new features.</highlights>
+          <highlights>Provided training to over 70 consultants via the EY internal training program by providing guidance and participating in code reviews.</highlights>
+          <highlights>Integrated IIQ with several down stream systems, including: 389 Directory Server, Active Directory, ADLDS, CA Top Secret, IBM System i, Microsoft SQL Server Database (JDBC), MySQL Server Database (JDBC), Okta, Oracle Database (JDBC), RACF, SAP BusinessObjects, SAP ERP, SAP Portal, SAP SRM, Workday, and various RESTful web services.</highlights>
         </highlights>
       </experiences>
       <experiences>
@@ -75,7 +80,7 @@
         <technologyUsed>
           <technologyUsed>Java/Groovy</technologyUsed>
           <technologyUsed>Python</technologyUsed>
-          <technologyUsed>BASH</technologyUsed>
+          <technologyUsed>Bash/Shell</technologyUsed>
           <technologyUsed>Apache HTTP Server</technologyUsed>
           <technologyUsed>Apache Tomcat</technologyUsed>
           <technologyUsed>IIS</technologyUsed>
@@ -85,11 +90,10 @@
           <technologyUsed>VirtualBox</technologyUsed>
         </technologyUsed>
         <highlights>
-          <highlights>Designed and developed a Groovy application, which automated a previously manually-compiled monthly application performance index. The application aggregated data from multiple reporting tools leveraging the Splunk SDK for Java and reading from an Oracle 11g database backend.</highlights>
-          <highlights>Engineered and supported the implementation of enterprise ETL and Business Intelligence Reporting tools across four environments, spanning more than fourteen application servers. Participated in planning, configuration, and troubleshooting of all server-side decisions.</highlights>
+          <highlights>Designed and developed a Groovy application, which automated a previously manually-compiled monthly application performance index leveraging the Splunk SDK for Java and reading from an Oracle database backend.</highlights>
+          <highlights>Engineered and supported the implementation of enterprise ETL and Business Intelligence Reporting tools across four environments, spanning more than fourteen application servers.</highlights>
           <highlights>Automated reporting processes using VBA, which parsed data and generated charts in Microsoft Excel with a single click as opposed to a manual process.</highlights>
-          <highlights>Developed a solution to remediate application latency in an Apache Tomcat application by creating an extensible custom Python library to execute BASH commands on Linux servers. </highlights>
-          <highlights>Authored a variety of BASH scripts to common Linux/Solaris server issues.</highlights>
+          <highlights>Developed a solution to remediate application latency in an Apache Tomcat application by creating an extensible custom Python library to execute Shell commands on Linux servers. </highlights>
         </highlights>
       </experiences>
     </experiences>
@@ -131,7 +135,7 @@
           <tools>Groovy</tools>
           <tools>Python</tools>
           <tools>C/C++</tools>
-          <tools>BASH</tools>
+          <tools>Bash/Shell</tools>
           <tools>VBA</tools>
           <tools>JavaScript</tools>
           <tools>PowerShell</tools>
