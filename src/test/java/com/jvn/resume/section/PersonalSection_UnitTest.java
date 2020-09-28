@@ -15,9 +15,7 @@ public class PersonalSection_UnitTest {
     section.setLastName("Jeff");
     section.setWebsite("internet.com");
 
-    ToStringUtil.assertToStringContains(section.toString(),
-        "Street", "gmail", "Jim", "Jeff", "internet.com"
-    );
+    ToStringUtil.assertToStringContains(section.toString(), "Street", "gmail", "Jim", "Jeff", "internet.com");
   }
 
 }

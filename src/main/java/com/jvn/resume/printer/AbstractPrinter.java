@@ -1,6 +1,5 @@
 package com.jvn.resume.printer;
 
-
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
 public abstract class AbstractPrinter implements Printer {

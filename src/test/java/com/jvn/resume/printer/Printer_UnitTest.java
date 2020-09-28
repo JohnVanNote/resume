@@ -26,7 +26,9 @@ public class Printer_UnitTest {
 
     public void printResume(Resume resume) throws IOException {
       called = true;
-      if (resume != null) throw new IOException();
+      if (resume != null) {
+        throw new IOException();
+      }
     }
 
   }

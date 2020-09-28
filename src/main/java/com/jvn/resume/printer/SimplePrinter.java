@@ -24,4 +24,5 @@ public class SimplePrinter extends AbstractPrinter {
       ((Writer) out).close();
     }
   }
+
 }
