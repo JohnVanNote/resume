@@ -1,41 +1,41 @@
 {
-  "personalSection" : {
-    "firstName" : "John",
-    "lastName" : "Van Note",
-    "address" : {
-      "street" : "800 P St. NW",
-      "additionalStreet" : "Apt. 620",
-      "city" : "Washington",
-      "state" : "DC",
-      "zip" : "20001"
+  "personalSection": {
+    "firstName": "John",
+    "lastName": "Van Note",
+    "address": {
+      "street": "800 P St. NW",
+      "additionalStreet": "Apt. 620",
+      "city": "Washington",
+      "state": "DC",
+      "zip": "20001"
     },
-    "phoneNumber" : "215.518.0823",
-    "email" : "johnlvannote@protonmail.com",
-    "website" : "https://github.com/JohnVanNote"
+    "phoneNumber": "215.518.0823",
+    "email": "johnlvannote@protonmail.com",
+    "website": "https://github.com/JohnVanNote"
   },
-  "summarySection" : {
-    "summary" : "John Van Note is a Senior Software Engineer in the Consulting practice of Ernst \\& Young LLP. He has over 5 years of experience in cyber security and software development, architecture, and design. Over the past 3 years, he has focused on the implementation of Identity and Access Management (IAM) solutions including large migrations of Identity Governance andAdministration (IGA) platforms."
+  "summarySection": {
+    "summary": "John Van Note is a Senior Software Engineer in the Consulting practice of Ernst \\& Young LLP. He has over 5 years of experience in software development, testing, architecture, and design in the cyber security field. Over the past 3 years, he has focused on the implementation of Identity and Access Management (IAM) solutions including large migrations of Identity Governance andAdministration (IGA) platforms primarily using Java."
   },
-  "experienceSection" : {
-    "experiences" : [
+  "experienceSection": {
+    "experiences": [
       {
-        "title" : "Senior Software Engineer",
-        "tenure" : {
-          "startDate" : {
-            "year" : 2017,
-            "month" : "MARCH"
+        "title": "Senior Software Engineer",
+        "tenure": {
+          "startDate": {
+            "year": 2017,
+            "month": "MARCH"
           },
-          "endDate" : null
+          "endDate": null
         },
-        "company" : "Ernst \\& Young (acquired from Sila Solutions Group December 2019)",
-        "address" : {
-          "street" : null,
-          "additionalStreet" : null,
-          "city" : "Arlington",
-          "state" : "VA",
-          "zip" : null
+        "company": "Ernst \\& Young (acquired from Sila Solutions Group December 2019)",
+        "address": {
+          "street": null,
+          "additionalStreet": null,
+          "city": "Arlington",
+          "state": "VA",
+          "zip": null
         },
-        "technologyUsed" : [
+        "technologyUsed": [
           "Java",
           "Jenkins",
           "Vagrant/VirtualBox",
@@ -44,39 +44,39 @@
           "Bash/Shell",
           "AWS"
         ],
-        "highlights" : [
-          "Led the technical implementation of an IGA platform leveraging SailPoint IdentityIQ (IIQ) across multiple clients in the retail, housing, pharmaceutical, and insurance industries.",
-          "Designed the migration of custom business processes such as Lifecycle Event Management (LCM), account creation, and access management, including using the feature flag software development technique to decouple the deployment of functionality from its release.",
-          "Automated the deployment and upgrade processes using a Jenkins pipeline for continuous integration and Artifactory for artifact management encouraging shorter deployment timelines to deploy smaller software changes with more resiliency.",
+        "highlights": [
+          "Led the technical implementation of an IGA platform, building Java customizations on the SailPoint IdentityIQ (IIQ) solution, across multiple clients in the retail, housing, pharmaceutical, and insurance industries.",
+          "Designed the implementation and migration custom business processes, such as Lifecycle Event Management (LCM), account creation, and access management, including using the feature flag software development technique to decouple the deployment of functionality from its release.",
           "Drove the adoption of a team-wide unit testing framework, leveraging the TestNG and EasyMock testing frameworks, to reduce code duplication and improve confidence in refactoring and bug fixing.",
-          "Designed the high-level architecture for a resume parsing application, following a model-view-controller (MVC) design pattern that leveraged ReactJS for the front end, Spring Boot for the business logic, ElasticSearch for data storage, and Jenkins for build automation.",
-          "Managed multiple workstreams via a release and feature branching model leveraging git for distributed version-control.",
+          "Automated the deployment and upgrade processes using a Jenkins pipeline for continuous integration and Artifactory for artifact management encouraging shorter deployment timelines to deploy smaller software changes with more resiliency.",
+          "Designed the architecture for a resume parsing application, following a model-view-controller (MVC) design pattern that leveraged ReactJS for the front end, Spring Boot and Java for the business logic, ElasticSearch for data storage, and Jenkins for build automation.",
           "Contributor to a series of EY internal development projects, primarily responsible for code maintenance, developing enhancements, unit testing coverage, and code reviews of new features.",
           "Provided training to over 70 consultants via the EY internal training program by providing guidance and participating in code reviews.",
-          "Integrated IIQ with several down stream systems, including: 389 Directory Server, Active Directory, ADLDS, CA Top Secret, IBM System i, Microsoft SQL Server Database (JDBC), MySQL Server Database (JDBC), Okta, Oracle Database (JDBC), RACF, SAP BusinessObjects, SAP ERP, SAP Portal, SAP SRM, Workday, and various RESTful web services."
+          "Integrated IIQ with several down stream systems, including: Active Directory, LDAP (389 DS, ADLDS, OpenLDAP), MainFrame (CA Top Secret, IBM System i, RACF), JDBC (Microsoft SQL, MySQL, Oracle PL/SQL), Okta, SAP (BusinessObjects, ERP, Portal, SRM), Workday, and various RESTful web services.",
+          "Managed multiple workstreams via a release and feature branching model leveraging git for distributed version-control."
         ]
       },
       {
-        "title" : "Software Support Engineer",
-        "tenure" : {
-          "startDate" : {
-            "year" : 2015,
-            "month" : "MARCH"
+        "title": "Software Support Engineer",
+        "tenure": {
+          "startDate": {
+            "year": 2015,
+            "month": "MARCH"
           },
-          "endDate" : {
-            "year" : 2017,
-            "month" : "MARCH"
+          "endDate": {
+            "year": 2017,
+            "month": "MARCH"
           }
         },
-        "company" : "Corporation Service Company",
-        "address" : {
-          "street" : null,
-          "additionalStreet" : null,
-          "city" : "Wilmington",
-          "state" : "DE",
-          "zip" : null
+        "company": "Corporation Service Company",
+        "address": {
+          "street": null,
+          "additionalStreet": null,
+          "city": "Wilmington",
+          "state": "DE",
+          "zip": null
         },
-        "technologyUsed" : [
+        "technologyUsed": [
           "Java/Groovy",
           "Python",
           "Bash/Shell",
@@ -88,7 +88,7 @@
           "Git",
           "VirtualBox"
         ],
-        "highlights" : [
+        "highlights": [
           "Designed and developed a Groovy application, which automated a previously manually-compiled monthly application performance index leveraging the Splunk SDK for Java and reading from an Oracle database backend.",
           "Engineered and supported the implementation of enterprise ETL and Business Intelligence Reporting tools across four environments, spanning more than fourteen application servers.",
           "Automated reporting processes using VBA, which parsed data and generated charts in Microsoft Excel with a single click as opposed to a manual process.",
@@ -96,40 +96,40 @@
         ]
       }
     ],
-    "title" : "Experience"
+    "title": "Experience"
   },
-  "educationSection" : {
-    "schools" : [
+  "educationSection": {
+    "schools": [
       {
-        "degree" : "Bachelor of Science in Business Administration, Minor in Computer Science",
-        "name" : "Drexel University",
-        "address" : {
-          "street" : null,
-          "additionalStreet" : null,
-          "city" : "Philadelphia",
-          "state" : "PA",
-          "zip" : null
+        "degree": "Bachelor of Science in Business Administration, Minor in Computer Science",
+        "name": "Drexel University",
+        "address": {
+          "street": null,
+          "additionalStreet": null,
+          "city": "Philadelphia",
+          "state": "PA",
+          "zip": null
         },
-        "gpa" : "3.59",
-        "tenure" : {
-          "startDate" : {
-            "year" : 2008,
-            "month" : "SEPTEMBER"
+        "gpa": "3.59",
+        "tenure": {
+          "startDate": {
+            "year": 2008,
+            "month": "SEPTEMBER"
           },
-          "endDate" : {
-            "year" : 2013,
-            "month" : "JUNE"
+          "endDate": {
+            "year": 2013,
+            "month": "JUNE"
           }
         }
       }
     ],
-    "title" : "Education"
+    "title": "Education"
   },
-  "technicalSection" : {
-    "toolSet" : [
+  "technicalSection": {
+    "toolSet": [
       {
-        "label" : "Programming/Scripting Languages",
-        "tools" : [
+        "label": "Programming/Scripting Languages",
+        "tools": [
           "Java",
           "Groovy",
           "Python",
@@ -141,8 +141,8 @@
         ]
       },
       {
-        "label" : "Development Tools",
-        "tools" : [
+        "label": "Development Tools",
+        "tools": [
           "Git/SVN",
           "Vagrant",
           "Jenkins",
@@ -152,8 +152,8 @@
         ]
       },
       {
-        "label" : "Web Servers",
-        "tools" : [
+        "label": "Web Servers",
+        "tools": [
           "Apache HTTP Server",
           "IIS",
           "Apache Tomcat",
@@ -161,19 +161,19 @@
         ]
       },
       {
-        "label" : "Databases",
-        "tools" : [
+        "label": "Databases",
+        "tools": [
           "Oracle",
           "MySQL",
           "Amazon Aurora"
         ]
       }
     ],
-    "title" : "Technical Tools"
+    "title": "Technical Tools"
   },
-  "theme" : "CLASSIC",
-  "fontSize" : "ELEVEN",
-  "fontFamily" : "SANS",
-  "paperSize" : "A4",
-  "color" : "BLACK"
+  "theme": "CLASSIC",
+  "fontSize": "ELEVEN",
+  "fontFamily": "SANS",
+  "paperSize": "A4",
+  "color": "BLACK"
 }
