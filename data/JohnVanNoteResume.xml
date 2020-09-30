@@ -1,5 +1,6 @@
 <LatexResume>
   <personalSection>
+    <include>true</include>
     <firstName>John</firstName>
     <lastName>Van Note</lastName>
     <address>
@@ -14,10 +15,21 @@
     <website>https://github.com/JohnVanNote</website>
   </personalSection>
   <summarySection>
+    <include>true</include>
     <summary>John Van Note is a Senior Software Engineer in the Consulting practice of Ernst \&amp; Young LLP. He has over 5 years of experience in software development, testing, architecture, and design in the cyber security field. Over the past 3 years, he has focused on the implementation of Identity and Access Management (IAM) solutions including large migrations of Identity Governance andAdministration (IGA) platforms primarily using Java.</summary>
     <title>Summary</title>
   </summarySection>
+  <projectSection>
+    <include>true</include>
+    <projects>
+      <projects>Project 1</projects>
+      <projects>Project 2</projects>
+      <projects>Project 3</projects>
+    </projects>
+    <title>Personal Projects</title>
+  </projectSection>
   <experienceSection>
+    <include>true</include>
     <experiences>
       <experiences>
         <title>Senior Software Engineer</title>
@@ -100,6 +112,7 @@
     <title>Experience</title>
   </experienceSection>
   <educationSection>
+    <include>true</include>
     <schools>
       <schools>
         <degree>Bachelor of Science in Business Administration, Minor in Computer Science</degree>
@@ -127,6 +140,7 @@
     <title>Education</title>
   </educationSection>
   <technicalSection>
+    <include>true</include>
     <toolSet>
       <toolSet>
         <label>Programming/Scripting Languages</label>

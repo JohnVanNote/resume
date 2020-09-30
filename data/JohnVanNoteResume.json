@@ -98,6 +98,14 @@
     ],
     "title": "Experience"
   },
+  "projectSection" : {
+    "projects" : [
+      "Project 1",
+      "Project 2",
+      "Project 3"
+    ],
+    "included" : false
+  },
   "educationSection": {
     "schools": [
       {

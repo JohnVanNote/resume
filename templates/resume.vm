@@ -2,6 +2,7 @@
 #set( $address = ${personal.address} )
 #set( $summary = ${resume.summarySection.summary} )
 #set( $experiences = ${resume.experienceSection.experiences} )
+#set( $projects = ${resume.projectSection.projects} )
 #set( $schools = ${resume.educationSection.schools} )
 #set( $toolSet = ${resume.technicalSection.toolSet} )
 
@@ -77,6 +78,11 @@
   \end{itemize}
 }
 
+#end
+
+\section{${resume.projectSection.title}}
+#foreach ($project in ${projects} )
+\cvlistitem{${project}}
 #end
 
 \section{${resume.educationSection.title}}
