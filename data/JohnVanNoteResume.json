@@ -11,10 +11,7 @@
     },
     "phoneNumber": "215.518.0823",
     "email": "johnlvannote@protonmail.com",
-    "website": "https://github.com/JohnVanNote"
-  },
-  "summarySection": {
-    "summary": "John Van Note is a Senior Software Engineer in the Consulting practice of Ernst \\& Young LLP. He has over 5 years of experience in software development, testing, architecture, and design in the cyber security field. Over the past 3 years, he has focused on the implementation of Identity and Access Management (IAM) solutions including large migrations of Identity Governance andAdministration (IGA) platforms primarily using Java."
+    "website": "https://github.com/johnvannote"
   },
   "experienceSection": {
     "experiences": [
@@ -27,7 +24,7 @@
           },
           "endDate": null
         },
-        "company": "Ernst \\& Young (acquired from Sila Solutions Group December 2019)",
+        "company": "Ernst \\& Young (acquired from Sila Solutions Group in December 2019)",
         "address": {
           "street": null,
           "additionalStreet": null,
@@ -37,23 +34,24 @@
         },
         "technologyUsed": [
           "Java",
-          "Jenkins",
           "Vagrant/VirtualBox",
+          "Jenkins",
           "Git/SVN",
+          "Apache Tomcat",
           "Docker",
           "Bash/Shell",
           "AWS"
         ],
         "highlights": [
-          "Led the technical implementation of an IGA platform, building Java customizations on the SailPoint IdentityIQ (IIQ) solution, across multiple clients in the retail, housing, pharmaceutical, and insurance industries.",
-          "Designed the implementation and migration custom business processes, such as Lifecycle Event Management (LCM), account creation, and access management, including using the feature flag software development technique to decouple the deployment of functionality from its release.",
-          "Drove the adoption of a team-wide unit testing framework, leveraging the TestNG and EasyMock testing frameworks, to reduce code duplication and improve confidence in refactoring and bug fixing.",
-          "Automated the deployment and upgrade processes using a Jenkins pipeline for continuous integration and Artifactory for artifact management encouraging shorter deployment timelines to deploy smaller software changes with more resiliency.",
-          "Designed the architecture for a resume parsing application, following a model-view-controller (MVC) design pattern that leveraged ReactJS for the front end, Spring Boot and Java for the business logic, ElasticSearch for data storage, and Jenkins for build automation.",
-          "Contributor to a series of EY internal development projects, primarily responsible for code maintenance, developing enhancements, unit testing coverage, and code reviews of new features.",
-          "Provided training to over 70 consultants via the EY internal training program by providing guidance and participating in code reviews.",
-          "Integrated IIQ with several down stream systems, including: Active Directory, LDAP (389 DS, ADLDS, OpenLDAP), MainFrame (CA Top Secret, IBM System i, RACF), JDBC (Microsoft SQL, MySQL, Oracle PL/SQL), Okta, SAP (BusinessObjects, ERP, Portal, SRM), Workday, and various RESTful web services.",
-          "Managed multiple workstreams via a release and feature branching model leveraging git for distributed version-control."
+          "Served as the technical lead on several IGA platform implementations, using Java to build customizations on the SailPoint IdentityIQ (IIQ) solution across clients in the retail, housing, pharmaceutical, and insurance industries.",
+          "Drove the adoption of unit testing practices on multiple projects, leveraging the TestNG and EasyMock testing frameworks, to reduce code duplication, lower risk associated with code refactoring, and reduce the number of bugs.",
+          "Automated the deployment and upgrade processes using a Jenkins pipeline and Artifactory for shorter, smaller, and more frequent deployments.",
+          "Designed the architecture for a resume parsing application using a model-view-controller (MVC) design pattern with a ReactJS front end, Java/Spring Boot back end, ElasticSearch data storage, and Jenkins/Maven build automation.",
+          "Contributor to a series of internal development tools and libraries, primarily responsible for code maintenance, developing enhancements, unit testing coverage, and code reviews of new features.",
+          "Managed multiple development work streams using release- and feature-based branching models.",
+          "Used the feature flag software development technique to decouple feature deployment from feature release.",
+          "Trained to over 70 junior engineers by providing guidance and participating in code quality reviews.",
+          "Integrated IIQ with several down stream systems, including: Active Directory, LDAP (389 DS, ADLDS, OpenLDAP), MainFrame (CA Top Secret, IBM System i, RACF), JDBC (Microsoft SQL, MySQL, Oracle PL/SQL), Okta, SAP (BusinessObjects, ERP, Portal, SRM), Workday, and REST APIs."
         ]
       },
       {
@@ -84,27 +82,18 @@
           "Apache Tomcat",
           "IIS",
           "Oracle WebLogic",
-          "SQL",
           "Git",
           "VirtualBox"
         ],
         "highlights": [
-          "Designed and developed a Groovy application, which automated a previously manually-compiled monthly application performance index leveraging the Splunk SDK for Java and reading from an Oracle database backend.",
+          "Designed and developed a Groovy application, which automated a previously manually-compiled monthly application performance index using the Splunk SDK in Java and reading from an Oracle database.",
           "Engineered and supported the implementation of enterprise ETL and Business Intelligence Reporting tools across four environments, spanning more than fourteen application servers.",
-          "Automated reporting processes using VBA, which parsed data and generated charts in Microsoft Excel with a single click as opposed to a manual process.",
-          "Developed a solution to remediate application latency in an Apache Tomcat application by creating an extensible custom Python library to execute Shell commands on Linux servers. "
+          "Automated reporting processes using VBA, which parsed data and generated charts in Microsoft Excel with a single click.",
+          "Developed a solution to remediate application latency in an Apache Tomcat application by creating an extensible custom solution in Python to execute Shell commands on Linux servers. "
         ]
       }
     ],
     "title": "Experience"
-  },
-  "projectSection" : {
-    "projects" : [
-      "Project 1",
-      "Project 2",
-      "Project 3"
-    ],
-    "included" : false
   },
   "educationSection": {
     "schools": [
@@ -141,11 +130,8 @@
           "Java",
           "Groovy",
           "Python",
-          "C/C++",
           "Bash/Shell",
-          "VBA",
-          "JavaScript",
-          "PowerShell"
+          "VBA"
         ]
       },
       {
@@ -155,16 +141,15 @@
           "Vagrant",
           "Jenkins",
           "Maven/Ant",
-          "IntelliJ/Eclipse",
-          "Docker"
+          "IntelliJ/Eclipse"
         ]
       },
       {
         "label": "Web Servers",
         "tools": [
+          "Apache Tomcat",
           "Apache HTTP Server",
           "IIS",
-          "Apache Tomcat",
           "Oracle WebLogic"
         ]
       },
@@ -173,6 +158,7 @@
         "tools": [
           "Oracle",
           "MySQL",
+          "MsSQL",
           "Amazon Aurora"
         ]
       }
