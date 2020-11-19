@@ -12,9 +12,7 @@ public class ToolSet_UnitTest {
     toolSet.setLabel("Label");
     toolSet.setTools(ImmutableList.of("T1", "T2", "T3"));
 
-    ToStringUtil.assertToStringContains(toolSet.toString(),
-        "Label", "T1", "T2", "T3"
-    );
+    ToStringUtil.assertToStringContains(toolSet.toString(), "Label", "T1", "T2", "T3");
   }
 
 }

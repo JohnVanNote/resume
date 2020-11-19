@@ -1,22 +1,26 @@
 <LatexResume>
   <personalSection>
+    <include>true</include>
     <firstName>John</firstName>
     <lastName>Van Note</lastName>
     <address>
       <street>800 P St. NW</street>
-      <additionalStreet>Apt.620</additionalStreet>
+      <additionalStreet>Apt. 620</additionalStreet>
       <city>Washington</city>
       <state>DC</state>
       <zip>20001</zip>
     </address>
     <phoneNumber>215.518.0823</phoneNumber>
     <email>johnlvannote@protonmail.com</email>
-    <website>https://github.com/JohnVanNote</website>
+    <website>https://github.com/johnvannote</website>
   </personalSection>
+  <summarySection/>
+  <projectSection/>
   <experienceSection>
+    <include>true</include>
     <experiences>
       <experiences>
-        <title>Senior Software Engineer, Identity \&amp; Access Management</title>
+        <title>Senior Software Engineer</title>
         <tenure>
           <startDate>
             <year>2017</year>
@@ -24,7 +28,7 @@
           </startDate>
           <endDate/>
         </tenure>
-        <company>Ernst \&amp; Young (acquired from Sila Solutions Group December 2019)</company>
+        <company>Ernst \&amp; Young (acquired from Sila Solutions Group in December 2019)</company>
         <address>
           <street/>
           <additionalStreet/>
@@ -34,18 +38,24 @@
         </address>
         <technologyUsed>
           <technologyUsed>Java</technologyUsed>
-          <technologyUsed>Apache Tomcat</technologyUsed>
-          <technologyUsed>SQL</technologyUsed>
-          <technologyUsed>Vagrant</technologyUsed>
-          <technologyUsed>Git</technologyUsed>
+          <technologyUsed>Vagrant/VirtualBox</technologyUsed>
           <technologyUsed>Jenkins</technologyUsed>
+          <technologyUsed>Git/SVN</technologyUsed>
+          <technologyUsed>Apache Tomcat</technologyUsed>
+          <technologyUsed>Docker</technologyUsed>
+          <technologyUsed>Bash/Shell</technologyUsed>
           <technologyUsed>AWS</technologyUsed>
         </technologyUsed>
         <highlights>
-          <highlights>Led the design and development of complex integrations with third-party Identity \&amp; Access Management (IAM) solutions. This was coded primarily in Java using TestNG/EasyMock for unit testing, and Vagrant/Docker for integration testing.</highlights>
-          <highlights>Designed the high-level architecture for a resume parsing application, following a model-view-controller (MVC) design pattern. The application leveraged ReactJS for the front end, Spring Boot for the business logic, ElasticSearch for data storage, and Jenkins for build automation.</highlights>
-          <highlights>Implemented practice-wide code standardization practices including automation, code review methodology, telemetry, and test procedures.</highlights>
-          <highlights>Mentored and trained over twenty junior software developers including entry-level and experienced hires.</highlights>
+          <highlights>Served as the technical lead on several IGA platform implementations, using Java to build customizations on the SailPoint IdentityIQ (IIQ) solution across clients in the retail, housing, pharmaceutical, and insurance industries.</highlights>
+          <highlights>Drove the adoption of unit testing practices on multiple projects, leveraging the TestNG and EasyMock testing frameworks, to reduce code duplication, lower risk associated with code refactoring, and reduce the number of bugs.</highlights>
+          <highlights>Automated the deployment and upgrade processes using a Jenkins pipeline and Artifactory for shorter, smaller, and more frequent deployments.</highlights>
+          <highlights>Designed the architecture for a resume parsing application using a model-view-controller (MVC) design pattern with a ReactJS front end, Java/Spring Boot back end, ElasticSearch data storage, and Jenkins/Maven build automation.</highlights>
+          <highlights>Contributor to a series of internal development tools and libraries, primarily responsible for code maintenance, developing enhancements, unit testing coverage, and code reviews of new features.</highlights>
+          <highlights>Managed multiple development work streams using release- and feature-based branching models.</highlights>
+          <highlights>Used the feature flag software development technique to decouple feature deployment from feature release.</highlights>
+          <highlights>Trained to over 70 junior engineers by providing guidance and participating in code quality reviews.</highlights>
+          <highlights>Integrated IIQ with several down stream systems, including: Active Directory, LDAP (389 DS, ADLDS, OpenLDAP), MainFrame (CA Top Secret, IBM System i, RACF), JDBC (Microsoft SQL, MySQL, Oracle PL/SQL), Okta, SAP (BusinessObjects, ERP, Portal, SRM), Workday, and REST APIs.</highlights>
         </highlights>
       </experiences>
       <experiences>
@@ -71,27 +81,26 @@
         <technologyUsed>
           <technologyUsed>Java/Groovy</technologyUsed>
           <technologyUsed>Python</technologyUsed>
-          <technologyUsed>BASH</technologyUsed>
+          <technologyUsed>Bash/Shell</technologyUsed>
           <technologyUsed>Apache HTTP Server</technologyUsed>
           <technologyUsed>Apache Tomcat</technologyUsed>
           <technologyUsed>IIS</technologyUsed>
           <technologyUsed>Oracle WebLogic</technologyUsed>
-          <technologyUsed>SQL</technologyUsed>
           <technologyUsed>Git</technologyUsed>
           <technologyUsed>VirtualBox</technologyUsed>
         </technologyUsed>
         <highlights>
-          <highlights>Designed and developed a Groovy application, which automated a previously manually-compiled monthly application performance index. The application aggregated data from multiple reporting tools leveraging the Splunk SDK for Java and reading from an Oracle 11g database backend.</highlights>
-          <highlights>Engineered and supported the implementation of enterprise ETL and Business Intelligence Reporting tools across four environments, spanning more than fourteen application servers. Participated in planning, configuration, and troubleshooting of all server-side decisions.</highlights>
-          <highlights>Automated reporting processes using VBA, which parsed data and generated charts in Microsoft Excel with a single click as opposed to a manual process.</highlights>
-          <highlights>Developed a solution to remediate application latency in an Apache Tomcat application by creating an extensible custom Python library to execute BASH commands on Linux servers. </highlights>
-          <highlights>Authored a variety of BASH scripts to common Linux/Solaris server issues.</highlights>
+          <highlights>Designed and developed a Groovy application, which automated a previously manually-compiled monthly application performance index using the Splunk SDK in Java and reading from an Oracle database.</highlights>
+          <highlights>Engineered and supported the implementation of enterprise ETL and Business Intelligence Reporting tools across four environments, spanning more than fourteen application servers.</highlights>
+          <highlights>Automated reporting processes using VBA, which parsed data and generated charts in Microsoft Excel with a single click.</highlights>
+          <highlights>Developed a solution to remediate application latency in an Apache Tomcat application by creating an extensible custom solution in Python to execute Shell commands on Linux servers. </highlights>
         </highlights>
       </experiences>
     </experiences>
     <title>Experience</title>
   </experienceSection>
   <educationSection>
+    <include>true</include>
     <schools>
       <schools>
         <degree>Bachelor of Science in Business Administration, Minor in Computer Science</degree>
@@ -119,6 +128,7 @@
     <title>Education</title>
   </educationSection>
   <technicalSection>
+    <include>true</include>
     <toolSet>
       <toolSet>
         <label>Programming/Scripting Languages</label>
@@ -126,11 +136,8 @@
           <tools>Java</tools>
           <tools>Groovy</tools>
           <tools>Python</tools>
-          <tools>C/C++</tools>
-          <tools>BASH</tools>
+          <tools>Bash/Shell</tools>
           <tools>VBA</tools>
-          <tools>JavaScript</tools>
-          <tools>PowerShell</tools>
         </tools>
       </toolSet>
       <toolSet>
@@ -141,15 +148,14 @@
           <tools>Jenkins</tools>
           <tools>Maven/Ant</tools>
           <tools>IntelliJ/Eclipse</tools>
-          <tools>Docker</tools>
         </tools>
       </toolSet>
       <toolSet>
         <label>Web Servers</label>
         <tools>
+          <tools>Apache Tomcat</tools>
           <tools>Apache HTTP Server</tools>
           <tools>IIS</tools>
-          <tools>Apache Tomcat</tools>
           <tools>Oracle WebLogic</tools>
         </tools>
       </toolSet>
@@ -158,6 +164,7 @@
         <tools>
           <tools>Oracle</tools>
           <tools>MySQL</tools>
+          <tools>MsSQL</tools>
           <tools>Amazon Aurora</tools>
         </tools>
       </toolSet>

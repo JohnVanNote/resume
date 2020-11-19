@@ -8,4 +8,5 @@ public class AbstractItem implements Item {
   public String toString() {
     return ToStringBuilder.reflectionToString(this);
   }
+
 }

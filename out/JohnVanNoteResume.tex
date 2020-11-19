@@ -3,7 +3,7 @@
 %% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
 %%
 %% John Van Note
-%% 2020-09-20
+%% 2020-11-15
 %%
 %% Resume source code
 %%
@@ -37,7 +37,7 @@
 %\usepackage{CJKutf8}
 
 % adjust the page margins
-\usepackage[scale=.8]{geometry}
+\usepackage[scale=.85]{geometry}
 
 % if you want to change the width of the column with the dates
 %\setlength{\hintscolumnwidth}{3cm}
@@ -48,46 +48,48 @@
 \name{John}{Van Note}
 % optional, remove / comment the line if not wanted
 %\title{Resume title}
-\address{800 P St. NW, Apt.620}{Washington, DC}{20001}
+\address{800 P St. NW, Apt. 620}{Washington, DC}{20001}
 \phone[mobile]{215.518.0823}
 \email{johnlvannote@protonmail.com}
-\homepage{https://github.com/JohnVanNote}
+\homepage{https://github.com/johnvannote}
 
 \begin{document}
 %-----       resume       ---------------------------------------------------------
 \makecvtitle
 
 \section{Experience}
-\cventry{Mar. 2017 - Current}{Senior Software Engineer, Identity \& Access Management}{Ernst \& Young (acquired from Sila Solutions Group December 2019)}{Arlington, VA}{}{
-  \textit{Technologies used: Java, Apache Tomcat, SQL, Vagrant, Git, Jenkins, AWS.}%
+\cventry{Mar. 2017 - Current}{Senior Software Engineer}{Ernst \& Young (acquired from Sila Solutions Group in December 2019)}{Arlington, VA}{}{
+  %\textit{Technologies used: Java, Vagrant/VirtualBox, Jenkins, Git/SVN, Apache Tomcat, Docker, Bash/Shell, AWS.}%
   \begin{itemize}%
-        \item Led the design and development of complex integrations with third-party Identity \& Access Management (IAM) solutions. This was coded primarily in Java using TestNG/EasyMock for unit testing, and Vagrant/Docker for integration testing.
-        \item Designed the high-level architecture for a resume parsing application, following a model-view-controller (MVC) design pattern. The application leveraged ReactJS for the front end, Spring Boot for the business logic, ElasticSearch for data storage, and Jenkins for build automation.
-        \item Implemented practice-wide code standardization practices including automation, code review methodology, telemetry, and test procedures.
-        \item Mentored and trained over twenty junior software developers including entry-level and experienced hires.
+        \item Served as the technical lead on several IGA platform implementations, using Java to build customizations on the SailPoint IdentityIQ (IIQ) solution across clients in the retail, housing, pharmaceutical, and insurance industries.
+        \item Drove the adoption of unit testing practices on multiple projects, leveraging the TestNG and EasyMock testing frameworks, to reduce code duplication, lower risk associated with code refactoring, and reduce the number of bugs.
+        \item Automated the deployment and upgrade processes using a Jenkins pipeline and Artifactory for shorter, smaller, and more frequent deployments.
+        \item Designed the architecture for a resume parsing application using a model-view-controller (MVC) design pattern with a ReactJS front end, Java/Spring Boot back end, ElasticSearch data storage, and Jenkins/Maven build automation.
+        \item Contributor to a series of internal development tools and libraries, primarily responsible for code maintenance, developing enhancements, unit testing coverage, and code reviews of new features.
+        \item Managed multiple development work streams using release- and feature-based branching models.
+        \item Used the feature flag software development technique to decouple feature deployment from feature release.
+        \item Trained to over 70 junior engineers by providing guidance and participating in code quality reviews.
+        \item Integrated IIQ with several down stream systems, including: Active Directory, LDAP (389 DS, ADLDS, OpenLDAP), MainFrame (CA Top Secret, IBM System i, RACF), JDBC (Microsoft SQL, MySQL, Oracle PL/SQL), Okta, SAP (BusinessObjects, ERP, Portal, SRM), Workday, and REST APIs.
       \end{itemize}
 }
-
 \cventry{Mar. 2015 - Mar. 2017}{Software Support Engineer}{Corporation Service Company}{Wilmington, DE}{}{
-  \textit{Technologies used: Java/Groovy, Python, BASH, Apache HTTP Server, Apache Tomcat, IIS, Oracle WebLogic, SQL, Git, VirtualBox.}%
+  %\textit{Technologies used: Java/Groovy, Python, Bash/Shell, Apache HTTP Server, Apache Tomcat, IIS, Oracle WebLogic, Git, VirtualBox.}%
   \begin{itemize}%
-        \item Designed and developed a Groovy application, which automated a previously manually-compiled monthly application performance index. The application aggregated data from multiple reporting tools leveraging the Splunk SDK for Java and reading from an Oracle 11g database backend.
-        \item Engineered and supported the implementation of enterprise ETL and Business Intelligence Reporting tools across four environments, spanning more than fourteen application servers. Participated in planning, configuration, and troubleshooting of all server-side decisions.
-        \item Automated reporting processes using VBA, which parsed data and generated charts in Microsoft Excel with a single click as opposed to a manual process.
-        \item Developed a solution to remediate application latency in an Apache Tomcat application by creating an extensible custom Python library to execute BASH commands on Linux servers. 
-        \item Authored a variety of BASH scripts to common Linux/Solaris server issues.
+        \item Designed and developed a Groovy application, which automated a previously manually-compiled monthly application performance index using the Splunk SDK in Java and reading from an Oracle database.
+        \item Engineered and supported the implementation of enterprise ETL and Business Intelligence Reporting tools across four environments, spanning more than fourteen application servers.
+        \item Automated reporting processes using VBA, which parsed data and generated charts in Microsoft Excel with a single click.
+        \item Developed a solution to remediate application latency in an Apache Tomcat application by creating an extensible custom solution in Python to execute Shell commands on Linux servers. 
       \end{itemize}
 }
 
+\section{Technical Tools}
+\cvlistitem{\textbf{Programming/Scripting Languages}: Java, Groovy, Python, Bash/Shell, VBA}
+\cvlistitem{\textbf{Development Tools}: Git/SVN, Vagrant, Jenkins, Maven/Ant, IntelliJ/Eclipse}
+\cvlistitem{\textbf{Web Servers}: Apache Tomcat, Apache HTTP Server, IIS, Oracle WebLogic}
+\cvlistitem{\textbf{Databases}: Oracle, MySQL, MsSQL, Amazon Aurora}
 
 \section{Education}
 \cventry{Sep. 2008 - Jun. 2013}{Bachelor of Science in Business Administration, Minor in Computer Science}{Drexel University}{Philadelphia, PA}{\textit{3.59 GPA}}{}
-
-\section{Technical Tools}
-\cvlistitem{\textbf{Programming/Scripting Languages}: Java, Groovy, Python, C/C++, BASH, VBA, JavaScript, PowerShell.}
-\cvlistitem{\textbf{Development Tools}: Git/SVN, Vagrant, Jenkins, Maven/Ant, IntelliJ/Eclipse, Docker.}
-\cvlistitem{\textbf{Web Servers}: Apache HTTP Server, IIS, Apache Tomcat, Oracle WebLogic.}
-\cvlistitem{\textbf{Databases}: Oracle, MySQL, Amazon Aurora.}
 
 \end{document}
 %% end of file 'JohnVanNoteResume.tex'.

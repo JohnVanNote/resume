@@ -14,8 +14,7 @@ public class Address_UnitTest {
     address.setState("Yellow State");
     address.setZip("98765");
 
-    ToStringUtil.assertToStringContains(address.toString(),
-    "123 Blue Street", "Apt. 456", "Red City", "Yellow State", "98765");
+    ToStringUtil.assertToStringContains(address.toString(), "123 Blue Street", "Apt. 456", "Red City", "Yellow State", "98765");
   }
 
 }

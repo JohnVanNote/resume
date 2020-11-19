@@ -21,8 +21,7 @@ public class SimpleData_UnitTest {
 
   @Test
   public void toString_AnyState_PrintsFields() {
-    ToStringUtil.assertToStringContains(DATE.toString(),
-    "AUGUST","1980");
+    ToStringUtil.assertToStringContains(DATE.toString(), "AUGUST", "1980");
   }
 
 }

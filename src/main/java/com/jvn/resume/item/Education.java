@@ -12,7 +12,7 @@ import lombok.Setter;
 @Getter
 @NoArgsConstructor
 @Setter
-public class Education extends AbstractItem{
+public class Education extends AbstractItem {
 
   private String degree;
   private String name;

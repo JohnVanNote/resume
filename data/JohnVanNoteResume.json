@@ -1,172 +1,173 @@
 {
-  "personalSection" : {
-    "firstName" : "John",
-    "lastName" : "Van Note",
-    "address" : {
-      "street" : "800 P St. NW",
-      "additionalStreet" : "Apt.620",
-      "city" : "Washington",
-      "state" : "DC",
-      "zip" : "20001"
+  "personalSection": {
+    "firstName": "John",
+    "lastName": "Van Note",
+    "address": {
+      "street": "800 P St. NW",
+      "additionalStreet": "Apt. 620",
+      "city": "Washington",
+      "state": "DC",
+      "zip": "20001"
     },
-    "phoneNumber" : "215.518.0823",
-    "email" : "johnlvannote@protonmail.com",
-    "website" : "https://github.com/JohnVanNote"
+    "phoneNumber": "215.518.0823",
+    "email": "johnlvannote@protonmail.com",
+    "website": "https://github.com/johnvannote"
   },
-  "experienceSection" : {
-    "experiences" : [
+  "experienceSection": {
+    "experiences": [
       {
-        "title" : "Senior Software Engineer, Identity \\& Access Management",
-        "tenure" : {
-          "startDate" : {
-            "year" : 2017,
-            "month" : "MARCH"
+        "title": "Senior Software Engineer",
+        "tenure": {
+          "startDate": {
+            "year": 2017,
+            "month": "MARCH"
           },
-          "endDate" : null
+          "endDate": null
         },
-        "company" : "Ernst \\& Young (acquired from Sila Solutions Group December 2019)",
-        "address" : {
-          "street" : null,
-          "additionalStreet" : null,
-          "city" : "Arlington",
-          "state" : "VA",
-          "zip" : null
+        "company": "Ernst \\& Young (acquired from Sila Solutions Group in December 2019)",
+        "address": {
+          "street": null,
+          "additionalStreet": null,
+          "city": "Arlington",
+          "state": "VA",
+          "zip": null
         },
-        "technologyUsed" : [
+        "technologyUsed": [
           "Java",
-          "Apache Tomcat",
-          "SQL",
-          "Vagrant",
-          "Git",
+          "Vagrant/VirtualBox",
           "Jenkins",
+          "Git/SVN",
+          "Apache Tomcat",
+          "Docker",
+          "Bash/Shell",
           "AWS"
         ],
-        "highlights" : [
-          "Led the design and development of complex integrations with third-party Identity \\& Access Management (IAM) solutions. This was coded primarily in Java using TestNG/EasyMock for unit testing, and Vagrant/Docker for integration testing.",
-          "Designed the high-level architecture for a resume parsing application, following a model-view-controller (MVC) design pattern. The application leveraged ReactJS for the front end, Spring Boot for the business logic, ElasticSearch for data storage, and Jenkins for build automation.",
-          "Implemented practice-wide code standardization practices including automation, code review methodology, telemetry, and test procedures.",
-          "Mentored and trained over twenty junior software developers including entry-level and experienced hires."
+        "highlights": [
+          "Served as the technical lead on several IGA platform implementations, using Java to build customizations on the SailPoint IdentityIQ (IIQ) solution across clients in the retail, housing, pharmaceutical, and insurance industries.",
+          "Drove the adoption of unit testing practices on multiple projects, leveraging the TestNG and EasyMock testing frameworks, to reduce code duplication, lower risk associated with code refactoring, and reduce the number of bugs.",
+          "Automated the deployment and upgrade processes using a Jenkins pipeline and Artifactory for shorter, smaller, and more frequent deployments.",
+          "Designed the architecture for a resume parsing application using a model-view-controller (MVC) design pattern with a ReactJS front end, Java/Spring Boot back end, ElasticSearch data storage, and Jenkins/Maven build automation.",
+          "Contributor to a series of internal development tools and libraries, primarily responsible for code maintenance, developing enhancements, unit testing coverage, and code reviews of new features.",
+          "Managed multiple development work streams using release- and feature-based branching models.",
+          "Used the feature flag software development technique to decouple feature deployment from feature release.",
+          "Trained to over 70 junior engineers by providing guidance and participating in code quality reviews.",
+          "Integrated IIQ with several down stream systems, including: Active Directory, LDAP (389 DS, ADLDS, OpenLDAP), MainFrame (CA Top Secret, IBM System i, RACF), JDBC (Microsoft SQL, MySQL, Oracle PL/SQL), Okta, SAP (BusinessObjects, ERP, Portal, SRM), Workday, and REST APIs."
         ]
       },
       {
-        "title" : "Software Support Engineer",
-        "tenure" : {
-          "startDate" : {
-            "year" : 2015,
-            "month" : "MARCH"
+        "title": "Software Support Engineer",
+        "tenure": {
+          "startDate": {
+            "year": 2015,
+            "month": "MARCH"
           },
-          "endDate" : {
-            "year" : 2017,
-            "month" : "MARCH"
+          "endDate": {
+            "year": 2017,
+            "month": "MARCH"
           }
         },
-        "company" : "Corporation Service Company",
-        "address" : {
-          "street" : null,
-          "additionalStreet" : null,
-          "city" : "Wilmington",
-          "state" : "DE",
-          "zip" : null
+        "company": "Corporation Service Company",
+        "address": {
+          "street": null,
+          "additionalStreet": null,
+          "city": "Wilmington",
+          "state": "DE",
+          "zip": null
         },
-        "technologyUsed" : [
+        "technologyUsed": [
           "Java/Groovy",
           "Python",
-          "BASH",
+          "Bash/Shell",
           "Apache HTTP Server",
           "Apache Tomcat",
           "IIS",
           "Oracle WebLogic",
-          "SQL",
           "Git",
           "VirtualBox"
         ],
-        "highlights" : [
-          "Designed and developed a Groovy application, which automated a previously manually-compiled monthly application performance index. The application aggregated data from multiple reporting tools leveraging the Splunk SDK for Java and reading from an Oracle 11g database backend.",
-          "Engineered and supported the implementation of enterprise ETL and Business Intelligence Reporting tools across four environments, spanning more than fourteen application servers. Participated in planning, configuration, and troubleshooting of all server-side decisions.",
-          "Automated reporting processes using VBA, which parsed data and generated charts in Microsoft Excel with a single click as opposed to a manual process.",
-          "Developed a solution to remediate application latency in an Apache Tomcat application by creating an extensible custom Python library to execute BASH commands on Linux servers. ",
-          "Authored a variety of BASH scripts to common Linux/Solaris server issues."
+        "highlights": [
+          "Designed and developed a Groovy application, which automated a previously manually-compiled monthly application performance index using the Splunk SDK in Java and reading from an Oracle database.",
+          "Engineered and supported the implementation of enterprise ETL and Business Intelligence Reporting tools across four environments, spanning more than fourteen application servers.",
+          "Automated reporting processes using VBA, which parsed data and generated charts in Microsoft Excel with a single click.",
+          "Developed a solution to remediate application latency in an Apache Tomcat application by creating an extensible custom solution in Python to execute Shell commands on Linux servers. "
         ]
       }
     ],
-    "title" : "Experience"
+    "title": "Experience"
   },
-  "educationSection" : {
-    "schools" : [
+  "educationSection": {
+    "schools": [
       {
-        "degree" : "Bachelor of Science in Business Administration, Minor in Computer Science",
-        "name" : "Drexel University",
-        "address" : {
-          "street" : null,
-          "additionalStreet" : null,
-          "city" : "Philadelphia",
-          "state" : "PA",
-          "zip" : null
+        "degree": "Bachelor of Science in Business Administration, Minor in Computer Science",
+        "name": "Drexel University",
+        "address": {
+          "street": null,
+          "additionalStreet": null,
+          "city": "Philadelphia",
+          "state": "PA",
+          "zip": null
         },
-        "gpa" : "3.59",
-        "tenure" : {
-          "startDate" : {
-            "year" : 2008,
-            "month" : "SEPTEMBER"
+        "gpa": "3.59",
+        "tenure": {
+          "startDate": {
+            "year": 2008,
+            "month": "SEPTEMBER"
           },
-          "endDate" : {
-            "year" : 2013,
-            "month" : "JUNE"
+          "endDate": {
+            "year": 2013,
+            "month": "JUNE"
           }
         }
       }
     ],
-    "title" : "Education"
+    "title": "Education"
   },
-  "technicalSection" : {
-    "toolSet" : [
+  "technicalSection": {
+    "toolSet": [
       {
-        "label" : "Programming/Scripting Languages",
-        "tools" : [
+        "label": "Programming/Scripting Languages",
+        "tools": [
           "Java",
           "Groovy",
           "Python",
-          "C/C++",
-          "BASH",
-          "VBA",
-          "JavaScript",
-          "PowerShell"
+          "Bash/Shell",
+          "VBA"
         ]
       },
       {
-        "label" : "Development Tools",
-        "tools" : [
+        "label": "Development Tools",
+        "tools": [
           "Git/SVN",
           "Vagrant",
           "Jenkins",
           "Maven/Ant",
-          "IntelliJ/Eclipse",
-          "Docker"
+          "IntelliJ/Eclipse"
         ]
       },
       {
-        "label" : "Web Servers",
-        "tools" : [
+        "label": "Web Servers",
+        "tools": [
+          "Apache Tomcat",
           "Apache HTTP Server",
           "IIS",
-          "Apache Tomcat",
           "Oracle WebLogic"
         ]
       },
       {
-        "label" : "Databases",
-        "tools" : [
+        "label": "Databases",
+        "tools": [
           "Oracle",
           "MySQL",
+          "MsSQL",
           "Amazon Aurora"
         ]
       }
     ],
-    "title" : "Technical Tools"
+    "title": "Technical Tools"
   },
-  "theme" : "CLASSIC",
-  "fontSize" : "ELEVEN",
-  "fontFamily" : "SANS",
-  "paperSize" : "A4",
-  "color" : "BLACK"
+  "theme": "CLASSIC",
+  "fontSize": "ELEVEN",
+  "fontFamily": "SANS",
+  "paperSize": "A4",
+  "color": "BLACK"
 }

@@ -22,9 +22,7 @@ public class ExperienceSection_UnitTest {
     ExperienceSection section = new ExperienceSection();
     section.setExperiences(ImmutableList.of(exp1, exp2));
 
-    ToStringUtil.assertToStringContains(section.toString(),
-        "King", "Westeros", "Experience"
-    );
+    ToStringUtil.assertToStringContains(section.toString(), "King", "Westeros", "Experience");
   }
 
 }

@@ -1,6 +1,8 @@
 #set( $personal = ${resume.personalSection} )
 #set( $address = ${personal.address} )
+#set( $summary = ${resume.summarySection.summary} )
 #set( $experiences = ${resume.experienceSection.experiences} )
+#set( $projects = ${resume.projectSection.projects} )
 #set( $schools = ${resume.educationSection.schools} )
 #set( $toolSet = ${resume.technicalSection.toolSet} )
 
@@ -42,7 +44,7 @@
 %\usepackage{CJKutf8}
 
 % adjust the page margins
-\usepackage[scale=.8]{geometry}
+\usepackage[scale=.85]{geometry}
 
 % if you want to change the width of the column with the dates
 %\setlength{\hintscolumnwidth}{3cm}
@@ -65,24 +67,23 @@
 \section{${resume.experienceSection.title}}
 #foreach ( $experience in $experiences )
 \cventry{${experience.tenure.startDate.readable()} -#if( ${experience.tenure.endDate} ) ${experience.tenure.endDate.readable()}#else Current#end}{${experience.title}}{${experience.company}}{${experience.address.city}, ${experience.address.state}}{}{
-  \textit{Technologies used:#foreach ( $tech in ${experience.technologyUsed} ) $tech#if( $foreach.hasNext ),#else.#end#end}%
+  %\textit{Technologies used:#foreach ( $tech in ${experience.technologyUsed} ) $tech#if( $foreach.hasNext ),#else.#end#end}%
   \begin{itemize}%
     #foreach ($highlight in ${experience.highlights} )
     \item $highlight
     #end
   \end{itemize}
 }
+#end
 
+\section{${resume.technicalSection.title}}
+#foreach ( $tools in $toolSet )
+\cvlistitem{\textbf{${tools.label}}:#foreach ( $tool in ${tools.tools} ) $tool#if( $foreach.hasNext ),#else#end#end}
 #end
 
 \section{${resume.educationSection.title}}
 #foreach ( $school in $schools )
 \cventry{${school.tenure.startDate.readable()} -#if( ${school.tenure.endDate} ) ${school.tenure.endDate.readable()}#else Current#end}{${school.degree}}{${school.name}}{${school.address.city}, ${school.address.state}}{\textit{${school.gpa} GPA}}{}
-#end
-
-\section{${resume.technicalSection.title}}
-#foreach ( $tools in $toolSet )
-\cvlistitem{\textbf{${tools.label}}:#foreach ( $tool in ${tools.tools} ) $tool#if( $foreach.hasNext ),#else.#end#end}
 #end
 
 \end{document}

@@ -22,9 +22,7 @@ public class EducationSection_UnitTest {
     EducationSection section = new EducationSection();
     section.setSchools(ImmutableList.of(school1, school2));
 
-    ToStringUtil.assertToStringContains(section.toString(),
-        "Degree", "11.0", "Education"
-    );
+    ToStringUtil.assertToStringContains(section.toString(), "Degree", "11.0", "Education");
   }
 
 }
