@@ -44,12 +44,12 @@
         ],
         "highlights": [
           "Served as the technical lead on several IGA platform implementations, using Java to build customizations on the SailPoint IdentityIQ (IIQ) solution across clients in the retail, housing, pharmaceutical, and insurance industries.",
-          "Drove the adoption of unit testing practices on multiple projects, leveraging the TestNG and EasyMock testing frameworks, to reduce code duplication, lower risk associated with code refactoring, and reduce the number of bugs.",
-          "Automated the deployment and upgrade processes using a Jenkins pipeline and Artifactory for shorter, smaller, and more frequent deployments.",
+          "Drove the adoption of unit testing practices on multiple projects, leveraging the TestNG and EasyMock testing frameworks to reduce code duplication, lower risk associated with refactoring, and bug reduction.",
+          "Automated deployment and upgrade processes using a Jenkins pipeline and Artifactory for shorter, smaller, and more frequent deployments.",
           "Designed the architecture for a resume parsing application using a model-view-controller (MVC) design pattern with a ReactJS front end, Java/Spring Boot back end, ElasticSearch data storage, and Jenkins/Maven build automation.",
           "Contributor to a series of internal development tools and libraries, primarily responsible for code maintenance, developing enhancements, unit testing coverage, and code reviews of new features.",
           "Managed multiple development work streams using release- and feature-based branching models.",
-          "Used the feature flag software development technique to decouple feature deployment from feature release.",
+          "Used the feature flag software development technique to decouple the deployment of functionality from its release.",
           "Trained to over 70 junior engineers by providing guidance and participating in code quality reviews.",
           "Integrated IIQ with several down stream systems, including: Active Directory, LDAP (389 DS, ADLDS, OpenLDAP), MainFrame (CA Top Secret, IBM System i, RACF), JDBC (Microsoft SQL, MySQL, Oracle PL/SQL), Okta, SAP (BusinessObjects, ERP, Portal, SRM), Workday, and REST APIs."
         ]
