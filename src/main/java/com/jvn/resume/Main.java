@@ -15,6 +15,7 @@ public class Main {
   private static final String OUTPUT_DIR = "out";
   private static final String TEMPLATES_DIR = "templates";
 
+  /*
   public static void main(String[] args) throws Exception {
 
     String propertiesFilePath = DEF_PROP_PATH;
@@ -47,5 +48,6 @@ public class Main {
     }
 
   }
+   */
 
 }
