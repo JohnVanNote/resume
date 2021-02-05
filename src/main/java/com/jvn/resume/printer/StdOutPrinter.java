@@ -12,10 +12,6 @@ public class StdOutPrinter extends AbstractPrinter {
   }
 
   @Override
-  public void close() throws Exception {
-  }
-
-  @Override
   public void print(Formatter formatter) throws IOException {
     System.out.println(formatter.format(resume));
   }

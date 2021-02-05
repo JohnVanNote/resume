@@ -5,6 +5,7 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.apache.commons.lang3.builder.ToStringBuilder;
 
 @AllArgsConstructor
 @Builder
@@ -22,5 +23,10 @@ public class ContactInformation {
   private String webpage;
   private String additionalInfo;
   private String quote;
+
+  @Override
+  public String toString() {
+    return ToStringBuilder.reflectionToString(this);
+  }
 
 }

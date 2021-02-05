@@ -1,7 +1,11 @@
 package com.jvn.resume.printer;
 
+import com.jvn.resume.formatter.Formatter;
 import com.jvn.resume.model.Resume;
+import java.io.IOException;
 import java.io.Writer;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
@@ -10,17 +14,16 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 @Getter
 @Setter
 @AllArgsConstructor
-public abstract class FileSystemPrinter implements Printer {
+public class FileSystemPrinter implements Printer {
 
   protected Resume resume;
-  protected Appendable out;
+  protected Path path;
 
   @Override
-  public void close() throws Exception {
-    if (out instanceof Writer) {
-      ((Writer) out).close();
-    }
+  public void print(Formatter formatter) throws IOException {
+    Files.write(path, formatter.format(resume).getBytes());
   }
+
 
   @Override
   public String toString() {
