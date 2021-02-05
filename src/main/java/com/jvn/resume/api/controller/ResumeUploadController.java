@@ -32,22 +32,18 @@ public class ResumeUploadController {
 
   @GetMapping("/")
   public String listUploadedFiles(Model model) throws IOException {
-
     model.addAttribute("files", storageService.loadAll().map(
         path -> MvcUriComponentsBuilder.fromMethodName(ResumeUploadController.class,
             "serveFile", path.getFileName().toString()).build().toUri().toString())
         .collect(Collectors.toList()));
-
     return "uploadForm";
   }
 
   @GetMapping("/files/{filename:.+}")
   @ResponseBody
   public ResponseEntity<Resource> serveFile(@PathVariable String filename) {
-
     Resource file = storageService.loadAsResource(filename);
-    return ResponseEntity.ok().header(HttpHeaders.CONTENT_DISPOSITION,
-        "attachment; filename=\"" + file.getFilename() + "\"").body(file);
+    return ResponseEntity.ok().header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + file.getFilename() + "\"").body(file);
   }
 
   @PostMapping("/")
@@ -55,9 +51,7 @@ public class ResumeUploadController {
       RedirectAttributes redirectAttributes) {
 
     storageService.store(file);
-    redirectAttributes.addFlashAttribute("message",
-        "You successfully uploaded " + file.getOriginalFilename() + "!");
-
+    redirectAttributes.addFlashAttribute("message", "You successfully uploaded " + file.getOriginalFilename() + "!");
     return "redirect:/";
   }
 

@@ -1,4 +1,4 @@
-package com.jvn.resume;
+package com.jvn.resume.util;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
@@ -36,7 +36,7 @@ public class MapperFactory {
     switch (type) {
       case JSON:
         mapper = new ObjectMapper();
-        mapper.setDefaultPrettyPrinter(CustomJsonArrayPrettyPrinter.INSTANCE);
+        //mapper.setDefaultPrettyPrinter(CustomJsonArrayPrettyPrinter.INSTANCE);
         break;
       case XML:
         mapper = new XmlMapper();

@@ -1,4 +1,4 @@
-package com.jvn.resume.item;
+package com.jvn.resume.model;
 
 import org.apache.commons.lang3.builder.ToStringBuilder;
 

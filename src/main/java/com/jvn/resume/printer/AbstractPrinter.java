@@ -1,12 +1,15 @@
 package com.jvn.resume.printer;
 
-import org.apache.commons.lang3.builder.ToStringBuilder;
+import com.jvn.resume.model.Resume;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
+@Setter
+@AllArgsConstructor
 public abstract class AbstractPrinter implements Printer {
 
-  @Override
-  public String toString() {
-    return ToStringBuilder.reflectionToString(this);
-  }
+  protected Resume resume;
 
 }

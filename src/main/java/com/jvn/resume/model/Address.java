@@ -1,4 +1,4 @@
-package com.jvn.resume.item;
+package com.jvn.resume.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

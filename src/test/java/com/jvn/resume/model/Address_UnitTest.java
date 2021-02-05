@@ -1,5 +1,6 @@
-package com.jvn.resume.item;
+package com.jvn.resume.model;
 
+import com.jvn.resume.model.Address;
 import org.testng.annotations.Test;
 import com.jvn.test.util.ToStringUtil;
 

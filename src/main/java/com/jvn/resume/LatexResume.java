@@ -1,5 +1,7 @@
 package com.jvn.resume;
 
+import com.jvn.resume.model.Resume;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -7,7 +9,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-public class LatexResume extends Resume {
+public class LatexResume {
 
   private Theme theme;
   private FontSize fontSize;

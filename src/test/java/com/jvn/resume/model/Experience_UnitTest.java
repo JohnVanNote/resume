@@ -1,4 +1,4 @@
-package com.jvn.resume.item;
+package com.jvn.resume.model;
 
 import com.google.common.collect.ImmutableList;
 import com.jvn.resume.date.DateRange;

@@ -1,0 +1,19 @@
+{
+  "contactInformation" : {
+    "firstName" : "Don",
+    "title" : null,
+    "lastName" : "Draper",
+    "address" : {
+      "street" : "NY Ave",
+      "additionalStreet" : null,
+      "city" : "New York",
+      "state" : "New York",
+      "zip" : "12345"
+    },
+    "phoneNumber" : null,
+    "email" : null,
+    "webpage" : null,
+    "additionalInfo" : null,
+    "quote" : null
+  }
+}

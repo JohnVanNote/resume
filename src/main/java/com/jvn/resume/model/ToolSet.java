@@ -1,4 +1,4 @@
-package com.jvn.resume.item;
+package com.jvn.resume.model;
 
 import java.util.List;
 import lombok.Getter;

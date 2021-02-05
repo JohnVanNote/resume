@@ -1,10 +1,10 @@
 package com.jvn.resume.printer;
 
-import com.jvn.resume.Resume;
+import com.jvn.resume.formatter.Formatter;
 import java.io.IOException;
 
-public interface Printer {
+public interface Printer extends AutoCloseable {
 
-  void printResume(Resume resume) throws IOException;
+  void print(Formatter formatter) throws IOException;
 
 }
