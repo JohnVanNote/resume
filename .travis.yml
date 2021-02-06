@@ -8,5 +8,4 @@ before_install:
   - sudo apt-get -y install cm-super
 
 script:
-  - make resume
-#  - make resume properties=other.resume.properties
+  - ./mvnw install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
