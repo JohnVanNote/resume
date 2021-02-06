@@ -51,9 +51,21 @@ public class FileSystemStorageService implements StorageService {
       String fileContents = new String(file.getBytes(), StandardCharsets.UTF_8);
       Resume resume = mapper.readValue(fileContents, Resume.class);
 
-      Path outputPath = this.rootLocation.resolve(inputFileBase + ".tex");
-      Printer printer = new FileSystemPrinter(resume, outputPath);
+      String latexFile = inputFileBase + ".tex";
+      Path tmpPath = Paths.get("out").resolve(latexFile);
+      //Path outputPath = this.rootLocation.resolve(inputFileBase + ".tex");
+      Printer printer = new FileSystemPrinter(resume, tmpPath);
       printer.print(new LatexFormatter(Theme.BANKING, FontSize.ELEVEN, FontFamily.SANS, PaperSize.A4, Color.BLUE));
+
+      // TODO fix this
+      /*Process process;
+      try {
+        process = Runtime.getRuntime().exec(String.format("pdflatex %s", tmpPath.toUri().getPath()));
+        process.waitFor();
+      } catch (Exception e) {
+        throw new RuntimeException(e);
+      }*/
+
     } catch (IOException e) {
       throw new StorageException("Failed to store file " + file.getOriginalFilename(), e);
     }

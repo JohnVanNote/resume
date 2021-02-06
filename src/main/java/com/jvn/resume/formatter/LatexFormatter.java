@@ -46,6 +46,8 @@ public class LatexFormatter implements Formatter {
     format.append("\\moderncvstyle{").append(theme.getName()).append("}").append(LS);
     format.append("\\moderncvcolor{").append(color.getName()).append("}").append(LS);
     format.append(LS);
+    format.append("\\usepackage[utf8]{inputenc}").append(LS);
+    format.append(LS);
     format.append("\\usepackage[scale=").append(margin).append("]{geometry}").append(LS);
     return format.toString();
   }

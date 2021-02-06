@@ -208,3 +208,4 @@ TSWLatexianTemp*
 *.iml
 
 upload-dir
+tmp/
