@@ -1,7 +1,12 @@
 package com.jvn.resume.api.storage;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.jvn.resume.formatter.SimpleFormatter;
+import com.jvn.resume.formatter.LatexFormatter;
+import com.jvn.resume.formatter.LatexFormatter.Color;
+import com.jvn.resume.formatter.LatexFormatter.FontFamily;
+import com.jvn.resume.formatter.LatexFormatter.FontSize;
+import com.jvn.resume.formatter.LatexFormatter.PaperSize;
+import com.jvn.resume.formatter.LatexFormatter.Theme;
 import com.jvn.resume.printer.FileSystemPrinter;
 import com.jvn.resume.util.MapperFactory;
 import com.jvn.resume.model.Resume;
@@ -46,9 +51,9 @@ public class FileSystemStorageService implements StorageService {
       String fileContents = new String(file.getBytes(), StandardCharsets.UTF_8);
       Resume resume = mapper.readValue(fileContents, Resume.class);
 
-      Path outputPath = this.rootLocation.resolve(inputFileBase + ".txt");
+      Path outputPath = this.rootLocation.resolve(inputFileBase + ".tex");
       Printer printer = new FileSystemPrinter(resume, outputPath);
-      printer.print(new SimpleFormatter());
+      printer.print(new LatexFormatter(Theme.BANKING, FontSize.ELEVEN, FontFamily.SANS, PaperSize.A4, Color.BLUE));
     } catch (IOException e) {
       throw new StorageException("Failed to store file " + file.getOriginalFilename(), e);
     }

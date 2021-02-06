@@ -1,6 +1,5 @@
 package com.jvn.resume.model;
 
-import com.jvn.resume.model.Address;
 import org.testng.annotations.Test;
 import com.jvn.test.util.ToStringUtil;
 
@@ -10,7 +9,7 @@ public class Address_UnitTest {
   public void toString_AnyState_PrintsFields() {
     Address address = new Address();
     address.setStreet("123 Blue Street");
-    address.setAdditionalStreet("Apt. 456");
+    address.setAptNumber("Apt. 456");
     address.setCity("Red City");
     address.setState("Yellow State");
     address.setZip("98765");

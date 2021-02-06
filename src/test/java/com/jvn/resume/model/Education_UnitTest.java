@@ -16,7 +16,7 @@ public class Education_UnitTest {
 
     Address address = Address.builder()
         .street("135 String St.")
-        .additionalStreet("Apt. 22b")
+        .aptNumber("Apt. 22b")
         .city("Portland")
         .state("OR")
         .zip("Some Oregon Zip")

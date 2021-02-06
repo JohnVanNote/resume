@@ -18,6 +18,8 @@ public class ResumePrintingUtil {
         .firstName("Don")
         .lastName("Draper")
         .address(contactAddress)
+        .phoneNumber("123-456-7890")
+        .email("ddraper@sterling-cooper.com")
         .build();
     Resume resume = Resume.builder()
         .contactInformation(contactInfo)

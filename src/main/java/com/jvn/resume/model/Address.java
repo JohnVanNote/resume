@@ -14,7 +14,7 @@ import lombok.Setter;
 public class Address extends AbstractItem {
 
   private String street;
-  private String additionalStreet;
+  private String aptNumber;
   private String city;
   private String state;
   private String zip;

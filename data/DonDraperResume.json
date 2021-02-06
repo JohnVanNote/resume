@@ -5,13 +5,13 @@
     "lastName" : "Draper",
     "address" : {
       "street" : "NY Ave",
-      "additionalStreet" : null,
+      "aptNumber" : null,
       "city" : "New York",
       "state" : "New York",
       "zip" : "12345"
     },
-    "phoneNumber" : null,
-    "email" : null,
+    "phoneNumber" : "123-456-7890",
+    "email" : "ddraper@sterling-cooper.com",
     "webpage" : null,
     "additionalInfo" : null,
     "quote" : null
