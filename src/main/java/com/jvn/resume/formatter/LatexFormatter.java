@@ -32,6 +32,8 @@ public class LatexFormatter implements Formatter {
     format.append(LS);
     format.append("\\begin{document}").append(LS);
     format.append(LS);
+    format.append("\\makecvtitle").append(LS);
+    format.append(LS);
     format.append("\\end{document}").append(LS);
     format.append("%% end of file");
     return format.toString();
@@ -44,11 +46,15 @@ public class LatexFormatter implements Formatter {
     format.append("\\documentclass[").append(formattingOptions).append("]{moderncv}").append(LS);
     format.append(LS);
     format.append("\\moderncvstyle{").append(theme.getName()).append("}").append(LS);
+    format.append(LS);
     format.append("\\moderncvcolor{").append(color.getName()).append("}").append(LS);
+    format.append(LS);
+    format.append("\\nopagenumbers{}").append(LS);
     format.append(LS);
     format.append("\\usepackage[utf8]{inputenc}").append(LS);
     format.append(LS);
     format.append("\\usepackage[scale=").append(margin).append("]{geometry}").append(LS);
+
     return format.toString();
   }
 
