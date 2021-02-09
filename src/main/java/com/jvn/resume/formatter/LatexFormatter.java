@@ -9,9 +9,13 @@ import com.jvn.resume.model.EducationEntry;
 import com.jvn.resume.model.EmploymentEntry;
 import com.jvn.resume.model.Resume;
 import com.jvn.resume.model.Section;
+import com.jvn.resume.model.date.Duration;
+import com.jvn.resume.model.date.SimpleDate;
 import java.util.List;
+import java.util.Objects;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
+import org.apache.commons.lang3.StringUtils;
 
 @RequiredArgsConstructor
 public class LatexFormatter implements Formatter {
@@ -104,8 +108,7 @@ public class LatexFormatter implements Formatter {
     StringBuilder format = new StringBuilder();
     if (sections != null) {
       for (Section section : sections) {
-        format.append(sectionFormatting(section));
-        format.append(LS);
+        format.append(sectionFormatting(section)).append(LS);
       }
     }
     return format.toString();
@@ -129,28 +132,44 @@ public class LatexFormatter implements Formatter {
       }
     }
 
-    format.append(LS);
     return format.toString();
   }
 
   private String cvEntryFormat(AbstractEntry entry) {
+    Duration duration = entry.getDuration();
+    SimpleDate startDate = duration.getStartDate();
+    SimpleDate endDate = duration.getEndDate();
+    String string1 = Objects.toString(entry.getString1(), "");
+    String string2 = Objects.toString(entry.getString2(), "");
+    String string3 = Objects.toString(entry.getString3(), "");
+    String string4 = Objects.toString(entry.getString4(), "");
+    String description = Objects.toString(entry.getString5(), "");
+
     StringBuilder format = new StringBuilder();
     format.append("\\cventry{")
-        .append(entry.getDuration().getStartDate().readable())
+        .append(startDate.readable())
         .append(" - ")
-        .append(entry.getDuration().getEndDate().readable())
+        .append(endDate.readable())
         .append("}{")
-        .append(entry.getString1())
+        .append(string1)
         .append("}{")
-        .append(entry.getString2())
+        .append(string2)
         .append("}{")
-        .append(entry.getString3())
-        .append("}{\\textit{")
-        .append(entry.getString4())
-        .append("}}{")
-        .append(entry.getDescription())
+        .append(string3)
         .append("}")
-        .append(LS);
+        .append("{");
+    if (StringUtils.isNotEmpty(string4)) {
+      format.append("\\textit{")
+          .append(string4)
+          .append("}");
+    }
+    format.append("}{");
+
+    if (StringUtils.isNotEmpty(description)) {
+      format.append(description);
+    }
+    format.append("}");
+    format.append(LS);
     return format.toString();
   }
 

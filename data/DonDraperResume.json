@@ -33,11 +33,12 @@
       "string2" : "Institution",
       "string3" : "City",
       "string4" : "Grade",
-      "description" : "Description",
+      "string5" : "Description",
       "degree" : "Degree",
       "institution" : "Institution",
       "city" : "City",
-      "gpa" : "Grade"
+      "gpa" : "Grade",
+      "description" : "Description"
     }, {
       "duration" : {
         "startDate" : {
@@ -53,11 +54,12 @@
       "string2" : "Institution",
       "string3" : "City",
       "string4" : "Grade",
-      "description" : "Description",
+      "string5" : "Description",
       "degree" : "Degree",
       "institution" : "Institution",
       "city" : "City",
-      "gpa" : "Grade"
+      "gpa" : "Grade",
+      "description" : "Description"
     } ],
     "employmentEntries" : null
   }, {
@@ -78,7 +80,7 @@
       "string2" : "Sterling Cooper",
       "string3" : "New York, NY",
       "string4" : null,
-      "description" : "Description",
+      "string5" : null,
       "jobTitle" : "Creative Director",
       "employer" : "Sterling Cooper",
       "address" : "New York, NY"

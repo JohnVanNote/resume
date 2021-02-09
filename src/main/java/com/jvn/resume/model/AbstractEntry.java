@@ -2,7 +2,6 @@ package com.jvn.resume.model;
 
 import com.jvn.resume.model.date.Duration;
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -18,6 +17,6 @@ public abstract class AbstractEntry {
   protected String string2;
   protected String string3;
   protected String string4;
-  private String description;
+  protected String string5;
 
 }

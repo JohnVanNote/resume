@@ -60,7 +60,6 @@ public class ResumePrintingUtil {
     empEntry1.setJobTitle("Creative Director");
     empEntry1.setEmployer("Sterling Cooper");
     empEntry1.setAddress("New York, NY");
-    empEntry1.setDescription("Description");
 
     Section experience = Section.builder()
         .title("Experience")
