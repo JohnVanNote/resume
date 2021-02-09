@@ -15,5 +15,73 @@
     "webpage" : null,
     "additionalInfo" : null,
     "quote" : null
-  }
+  },
+  "sections" : [ {
+    "title" : "Education",
+    "educationEntries" : [ {
+      "duration" : {
+        "startDate" : {
+          "year" : 1950,
+          "month" : "SEPTEMBER"
+        },
+        "endDate" : {
+          "year" : 1954,
+          "month" : "MAY"
+        }
+      },
+      "string1" : "Degree",
+      "string2" : "Institution",
+      "string3" : "City",
+      "string4" : "Grade",
+      "description" : "Description",
+      "degree" : "Degree",
+      "institution" : "Institution",
+      "city" : "City",
+      "gpa" : "Grade"
+    }, {
+      "duration" : {
+        "startDate" : {
+          "year" : 1950,
+          "month" : "SEPTEMBER"
+        },
+        "endDate" : {
+          "year" : 1954,
+          "month" : "MAY"
+        }
+      },
+      "string1" : "Degree",
+      "string2" : "Institution",
+      "string3" : "City",
+      "string4" : "Grade",
+      "description" : "Description",
+      "degree" : "Degree",
+      "institution" : "Institution",
+      "city" : "City",
+      "gpa" : "Grade"
+    } ],
+    "employmentEntries" : null
+  }, {
+    "title" : "Experience",
+    "educationEntries" : null,
+    "employmentEntries" : [ {
+      "duration" : {
+        "startDate" : {
+          "year" : 1958,
+          "month" : "JANUARY"
+        },
+        "endDate" : {
+          "year" : 1963,
+          "month" : "DECEMBER"
+        }
+      },
+      "string1" : "Creative Director",
+      "string2" : "Sterling Cooper",
+      "string3" : "New York, NY",
+      "string4" : null,
+      "description" : "Description",
+      "jobTitle" : "Creative Director",
+      "employer" : "Sterling Cooper",
+      "address" : "New York, NY"
+    } ]
+  } ]
 }

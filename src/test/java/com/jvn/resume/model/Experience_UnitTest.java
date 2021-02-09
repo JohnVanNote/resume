@@ -1,8 +1,8 @@
 package com.jvn.resume.model;
 
 import com.google.common.collect.ImmutableList;
-import com.jvn.resume.date.DateRange;
-import com.jvn.resume.date.SimpleDate;
+import com.jvn.resume.model.date.Duration;
+import com.jvn.resume.model.date.SimpleDate;
 import java.time.Month;
 import org.testng.annotations.Test;
 import com.jvn.test.util.ToStringUtil;
@@ -13,7 +13,7 @@ public class Experience_UnitTest {
   public void toString_AnyState_PrintsFields() {
     SimpleDate startDate = SimpleDate.builder().month(Month.APRIL).year(1989).build();
     SimpleDate endDate = SimpleDate.builder().month(Month.DECEMBER).year(2010).build();
-    DateRange tenure = DateRange.builder().startDate(startDate).endDate(endDate).build();
+    Duration tenure = Duration.builder().startDate(startDate).endDate(endDate).build();
 
     Address address = Address.builder()
         .street("Street")

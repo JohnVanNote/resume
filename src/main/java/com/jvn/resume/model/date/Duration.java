@@ -1,4 +1,4 @@
-package com.jvn.resume.date;
+package com.jvn.resume.model.date;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -12,7 +12,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 @Getter
 @NoArgsConstructor
 @Setter
-public class DateRange {
+public class Duration {
 
   private SimpleDate startDate;
   private SimpleDate endDate;

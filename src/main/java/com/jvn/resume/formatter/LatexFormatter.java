@@ -2,9 +2,14 @@ package com.jvn.resume.formatter;
 
 import static org.apache.commons.lang3.StringUtils.isNotEmpty;
 
+import com.jvn.resume.model.AbstractEntry;
 import com.jvn.resume.model.Address;
 import com.jvn.resume.model.ContactInformation;
+import com.jvn.resume.model.EducationEntry;
+import com.jvn.resume.model.EmploymentEntry;
 import com.jvn.resume.model.Resume;
+import com.jvn.resume.model.Section;
+import java.util.List;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 
@@ -33,6 +38,8 @@ public class LatexFormatter implements Formatter {
     format.append("\\begin{document}").append(LS);
     format.append(LS);
     format.append("\\makecvtitle").append(LS);
+    format.append(LS);
+    format.append(sectionsFormatting(resume)).append(LS);
     format.append(LS);
     format.append("\\end{document}").append(LS);
     format.append("%% end of file");
@@ -91,6 +98,62 @@ public class LatexFormatter implements Formatter {
     String fullStreet = isNotEmpty(aptNumber) ? street + ", " + aptNumber : street;
     return String.format("\\address{%s}{%s %s}{%s}", fullStreet, city, state, zip);
   }
+
+  private String sectionsFormatting(Resume resume) {
+    List<Section> sections = resume.getSections();
+    StringBuilder format = new StringBuilder();
+    if (sections != null) {
+      for (Section section : sections) {
+        format.append(sectionFormatting(section));
+        format.append(LS);
+      }
+    }
+    return format.toString();
+  }
+
+  private String sectionFormatting(Section section) {
+    StringBuilder format = new StringBuilder();
+    format.append("\\section{").append(section.getTitle()).append("}").append(LS);
+
+    List<EducationEntry> educationEntries = section.getEducationEntries();
+    if (educationEntries != null) {
+      for (EducationEntry entry : educationEntries) {
+        format.append(cvEntryFormat(entry));
+      }
+    }
+
+    List<EmploymentEntry> employmentEntries = section.getEmploymentEntries();
+    if (employmentEntries != null) {
+      for (EmploymentEntry employmentEntry : employmentEntries) {
+        format.append(cvEntryFormat(employmentEntry));
+      }
+    }
+
+    format.append(LS);
+    return format.toString();
+  }
+
+  private String cvEntryFormat(AbstractEntry entry) {
+    StringBuilder format = new StringBuilder();
+    format.append("\\cventry{")
+        .append(entry.getDuration().getStartDate().readable())
+        .append(" - ")
+        .append(entry.getDuration().getEndDate().readable())
+        .append("}{")
+        .append(entry.getString1())
+        .append("}{")
+        .append(entry.getString2())
+        .append("}{")
+        .append(entry.getString3())
+        .append("}{\\textit{")
+        .append(entry.getString4())
+        .append("}}{")
+        .append(entry.getDescription())
+        .append("}")
+        .append(LS);
+    return format.toString();
+  }
+
 
   @Getter
   public enum FontSize {

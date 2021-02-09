@@ -1,10 +1,10 @@
-package com.jvn.resume.date;
+package com.jvn.resume.model.date;
 
 import java.time.Month;
 import org.testng.annotations.Test;
 import com.jvn.test.util.ToStringUtil;
 
-public class DateRange_UnitTest {
+public class Duration_UnitTest {
 
   @Test
   public void toString_AnyState_PrintsFields() {
@@ -16,7 +16,7 @@ public class DateRange_UnitTest {
     endDate.setMonth(Month.MARCH);
     endDate.setYear(2019);
 
-    DateRange range = new DateRange();
+    Duration range = new Duration();
     range.setStartDate(startDate);
     range.setEndDate(endDate);
 

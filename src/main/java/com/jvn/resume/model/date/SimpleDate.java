@@ -1,4 +1,4 @@
-package com.jvn.resume.date;
+package com.jvn.resume.model.date;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import java.time.Month;

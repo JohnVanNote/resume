@@ -1,11 +1,11 @@
-package com.jvn.resume.date;
+package com.jvn.resume.model.date;
 
 import java.time.Month;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import com.jvn.test.util.ToStringUtil;
 
-public class SimpleData_UnitTest {
+public class SimpleDate_UnitTest {
 
   private static final SimpleDate DATE = new SimpleDate();
 
