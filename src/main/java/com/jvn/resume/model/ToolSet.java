@@ -8,7 +8,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-public class ToolSet extends AbstractItem {
+public class ToolSet extends Item {
 
   private String label;
   private List<String> tools;

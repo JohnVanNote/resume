@@ -11,7 +11,7 @@ import lombok.Setter;
 @Getter
 @NoArgsConstructor
 @Setter
-public class Address extends AbstractItem {
+public class Address {
 
   private String street;
   private String aptNumber;

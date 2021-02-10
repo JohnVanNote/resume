@@ -7,6 +7,7 @@ import com.jvn.resume.model.Address;
 import com.jvn.resume.model.ContactInformation;
 import com.jvn.resume.model.EducationEntry;
 import com.jvn.resume.model.EmploymentEntry;
+import com.jvn.resume.model.Item;
 import com.jvn.resume.model.Resume;
 import com.jvn.resume.model.Section;
 import com.jvn.resume.model.date.Duration;
@@ -132,6 +133,13 @@ public class LatexFormatter implements Formatter {
       }
     }
 
+    List<Item> items = section.getItems();
+    if (items != null) {
+      for (Item item : items) {
+        format.append(formatItem(item));
+      }
+    }
+
     return format.toString();
   }
 
@@ -169,6 +177,19 @@ public class LatexFormatter implements Formatter {
       format.append(description);
     }
     format.append("}");
+    format.append(LS);
+    return format.toString();
+  }
+
+  private String formatItem(Item item) {
+    StringBuilder format = new StringBuilder();
+    format.append("\\cvitem{").append(item.getKey()).append("}");
+    String valueStr = String.format("{%s}", item.getValue());
+    if (item.isEmphasis()) {
+      format.append("{\\emph").append(valueStr).append("}");
+    } else {
+      format.append(valueStr);
+    }
     format.append(LS);
     return format.toString();
   }

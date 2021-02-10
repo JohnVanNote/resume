@@ -21,6 +21,7 @@ public class Section {
   private String title;
   private List<EducationEntry> educationEntries;
   private List<EmploymentEntry> employmentEntries;
+  private List<Item> items;
 
   @Override
   public String toString() {

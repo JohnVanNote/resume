@@ -5,12 +5,15 @@ import com.jvn.resume.model.Address;
 import com.jvn.resume.model.ContactInformation;
 import com.jvn.resume.model.EducationEntry;
 import com.jvn.resume.model.EmploymentEntry;
+import com.jvn.resume.model.Item;
 import com.jvn.resume.model.Resume;
 import com.jvn.resume.model.Section;
 import com.jvn.resume.model.date.Duration;
 import com.jvn.resume.model.date.SimpleDate;
 import java.time.Month;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class ResumePrintingUtil {
 
@@ -49,6 +52,17 @@ public class ResumePrintingUtil {
         .educationEntries(Arrays.asList(edEntry1, edEntry1))
         .build();
 
+    List<Item> items = new ArrayList<>();
+    items.add(Item.builder().emphasis(true).key("title").value("Title").build());
+    items.add(Item.builder().key("supervisors").value("Supervisors").build());
+    items.add(Item.builder().key("description").value("Short thesis abstract").build());
+
+
+    Section thesis = Section.builder()
+        .title("Master Thesis")
+        .items(items)
+        .build();
+
     EmploymentEntry empEntry1 = new EmploymentEntry();
     empEntry1.setDuration(Duration.builder()
         .startDate(
@@ -70,6 +84,7 @@ public class ResumePrintingUtil {
         .contactInformation(contactInfo)
         .sections(Arrays.asList(
             education,
+            thesis,
             experience
         ))
         .build();

@@ -61,7 +61,25 @@
       "gpa" : "Grade",
       "description" : "Description"
     } ],
-    "employmentEntries" : null
+    "employmentEntries" : null,
+    "items" : null
+  }, {
+    "title" : "Master Thesis",
+    "educationEntries" : null,
+    "employmentEntries" : null,
+    "items" : [ {
+      "emphasis" : true,
+      "key" : "title",
+      "value" : "Title"
+    }, {
+      "emphasis" : false,
+      "key" : "supervisors",
+      "value" : "Supervisors"
+    }, {
+      "emphasis" : false,
+      "key" : "description",
+      "value" : "Short thesis abstract"
+    } ]
   }, {
     "title" : "Experience",
     "educationEntries" : null,
@@ -84,6 +102,7 @@
       "jobTitle" : "Creative Director",
       "employer" : "Sterling Cooper",
       "address" : "New York, NY"
-    } ]
+    } ],
+    "items" : null
   } ]
 }
