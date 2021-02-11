@@ -7,7 +7,6 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.apache.commons.lang3.builder.ToStringBuilder;
 
 @AllArgsConstructor
 @Builder
@@ -17,15 +16,10 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Section {
 
-  //protected boolean include = true;
   private String title;
+  private List<Section> subSections;
   private List<EducationEntry> educationEntries;
   private List<EmploymentEntry> employmentEntries;
   private List<Item> items;
-
-  @Override
-  public String toString() {
-    return ToStringBuilder.reflectionToString(this);
-  }
 
 }

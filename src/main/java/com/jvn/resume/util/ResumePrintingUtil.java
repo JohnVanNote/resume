@@ -57,28 +57,47 @@ public class ResumePrintingUtil {
     items.add(Item.builder().key("supervisors").value("Supervisors").build());
     items.add(Item.builder().key("description").value("Short thesis abstract").build());
 
-
     Section thesis = Section.builder()
         .title("Master Thesis")
         .items(items)
         .build();
 
-    EmploymentEntry empEntry1 = new EmploymentEntry();
-    empEntry1.setDuration(Duration.builder()
+    EmploymentEntry vocationalEntry = new EmploymentEntry();
+    vocationalEntry.setDuration(Duration.builder()
         .startDate(
             SimpleDate.builder().month(Month.JANUARY).year(1958).build()
         )
         .endDate(
             SimpleDate.builder().month(Month.DECEMBER).year(1963).build()
         ).build());
-    empEntry1.setJobTitle("Creative Director");
-    empEntry1.setEmployer("Sterling Cooper");
-    empEntry1.setAddress("New York, NY");
+    vocationalEntry.setJobTitle("Creative Director");
+    vocationalEntry.setEmployer("Sterling Cooper");
+    vocationalEntry.setAddress("New York, NY");
+
+    EmploymentEntry miscEntry = new EmploymentEntry();
+    miscEntry.setDuration(Duration.builder()
+        .startDate(
+            SimpleDate.builder().month(Month.JANUARY).year(1953).build()
+        )
+        .endDate(
+            SimpleDate.builder().month(Month.DECEMBER).year(1957).build()
+        ).build());
+    miscEntry.setJobTitle("Army");
+    miscEntry.setEmployer("WW2");
+    miscEntry.setAddress("Western Front");
 
     Section experience = Section.builder()
         .title("Experience")
-        .employmentEntries(Arrays.asList(empEntry1))
-        .build();
+        .subSections(Arrays.asList(
+            Section.builder()
+                .title("Vocational")
+                .employmentEntries(Arrays.asList(vocationalEntry))
+                .build(),
+            Section.builder()
+                .title("Miscellaneous")
+                .employmentEntries(Arrays.asList(miscEntry))
+                .build()
+        )).build();
 
     Resume resume = Resume.builder()
         .contactInformation(contactInfo)
@@ -86,8 +105,8 @@ public class ResumePrintingUtil {
             education,
             thesis,
             experience
-        ))
-        .build();
+        )).build();
+
     ObjectMapper mapper = MapperFactory.getMapper("json");
     mapper.writeValue(System.out, resume);
   }

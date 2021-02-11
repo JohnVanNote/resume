@@ -18,6 +18,7 @@
   },
   "sections" : [ {
     "title" : "Education",
+    "subSections" : null,
     "educationEntries" : [ {
       "duration" : {
         "startDate" : {
@@ -65,6 +66,7 @@
     "items" : null
   }, {
     "title" : "Master Thesis",
+    "subSections" : null,
     "educationEntries" : null,
     "employmentEntries" : null,
     "items" : [ {
@@ -82,27 +84,59 @@
     } ]
   }, {
     "title" : "Experience",
-    "educationEntries" : null,
-    "employmentEntries" : [ {
-      "duration" : {
-        "startDate" : {
-          "year" : 1958,
-          "month" : "JANUARY"
+    "subSections" : [ {
+      "title" : "Vocational",
+      "subSections" : null,
+      "educationEntries" : null,
+      "employmentEntries" : [ {
+        "duration" : {
+          "startDate" : {
+            "year" : 1958,
+            "month" : "JANUARY"
+          },
+          "endDate" : {
+            "year" : 1963,
+            "month" : "DECEMBER"
+          }
         },
-        "endDate" : {
-          "year" : 1963,
-          "month" : "DECEMBER"
-        }
-      },
-      "string1" : "Creative Director",
-      "string2" : "Sterling Cooper",
-      "string3" : "New York, NY",
-      "string4" : null,
-      "string5" : null,
-      "jobTitle" : "Creative Director",
-      "employer" : "Sterling Cooper",
-      "address" : "New York, NY"
+        "string1" : "Creative Director",
+        "string2" : "Sterling Cooper",
+        "string3" : "New York, NY",
+        "string4" : null,
+        "string5" : null,
+        "jobTitle" : "Creative Director",
+        "employer" : "Sterling Cooper",
+        "address" : "New York, NY"
+      } ],
+      "items" : null
+    }, {
+      "title" : "Miscellaneous",
+      "subSections" : null,
+      "educationEntries" : null,
+      "employmentEntries" : [ {
+        "duration" : {
+          "startDate" : {
+            "year" : 1953,
+            "month" : "JANUARY"
+          },
+          "endDate" : {
+            "year" : 1957,
+            "month" : "DECEMBER"
+          }
+        },
+        "string1" : "Army",
+        "string2" : "WW2",
+        "string3" : "Western Front",
+        "string4" : null,
+        "string5" : null,
+        "jobTitle" : "Army",
+        "employer" : "WW2",
+        "address" : "Western Front"
+      } ],
+      "items" : null
     } ],
+    "educationEntries" : null,
+    "employmentEntries" : null,
     "items" : null
   } ]
 }

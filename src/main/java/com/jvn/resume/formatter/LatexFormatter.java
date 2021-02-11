@@ -36,22 +36,22 @@ public class LatexFormatter implements Formatter {
     StringBuilder format = new StringBuilder();
     format.append("%% start of file").append(LS);
     format.append(LS);
-    format.append(topFormatting());
+    format.append(formatTop());
     format.append(LS);
-    format.append(contactFormatting(resume));
+    format.append(formatContactInformation(resume));
     format.append(LS);
     format.append("\\begin{document}").append(LS);
     format.append(LS);
     format.append("\\makecvtitle").append(LS);
     format.append(LS);
-    format.append(sectionsFormatting(resume)).append(LS);
+    format.append(formatSections(resume)).append(LS);
     format.append(LS);
     format.append("\\end{document}").append(LS);
     format.append("%% end of file");
     return format.toString();
   }
 
-  private String topFormatting() {
+  private String formatTop() {
     String formattingOptions = String.join(",", fontSize.getName(), paperSize.getName(), fontFamily.getName());
 
     StringBuilder format = new StringBuilder();
@@ -70,7 +70,7 @@ public class LatexFormatter implements Formatter {
     return format.toString();
   }
 
-  private String contactFormatting(Resume resume) {
+  private String formatContactInformation(Resume resume) {
     ContactInformation contactInfo = resume.getContactInformation();
     String firstName = contactInfo.getFirstName();
     String lastName = contactInfo.getLastName();
@@ -104,32 +104,36 @@ public class LatexFormatter implements Formatter {
     return String.format("\\address{%s}{%s %s}{%s}", fullStreet, city, state, zip);
   }
 
-  private String sectionsFormatting(Resume resume) {
+  private String formatSections(Resume resume) {
     List<Section> sections = resume.getSections();
     StringBuilder format = new StringBuilder();
     if (sections != null) {
       for (Section section : sections) {
-        format.append(sectionFormatting(section)).append(LS);
+        format.append(formatSection(section)).append(LS);
       }
     }
     return format.toString();
   }
 
-  private String sectionFormatting(Section section) {
+  private String formatSection(Section section, boolean isSubSection) {
     StringBuilder format = new StringBuilder();
-    format.append("\\section{").append(section.getTitle()).append("}").append(LS);
+    if (!isSubSection) {
+      format.append("\\section{").append(section.getTitle()).append("}").append(LS);
+    } else {
+      format.append("\\subsection{").append(section.getTitle()).append("}").append(LS);
+    }
 
     List<EducationEntry> educationEntries = section.getEducationEntries();
     if (educationEntries != null) {
       for (EducationEntry entry : educationEntries) {
-        format.append(cvEntryFormat(entry));
+        format.append(formatCvEntry(entry));
       }
     }
 
     List<EmploymentEntry> employmentEntries = section.getEmploymentEntries();
     if (employmentEntries != null) {
       for (EmploymentEntry employmentEntry : employmentEntries) {
-        format.append(cvEntryFormat(employmentEntry));
+        format.append(formatCvEntry(employmentEntry));
       }
     }
 
@@ -140,10 +144,25 @@ public class LatexFormatter implements Formatter {
       }
     }
 
+    List<Section> subsections = section.getSubSections();
+    if (subsections != null) {
+      for (Section subsection : subsections) {
+        format.append(formatSubSection(subsection));
+      }
+    }
+
     return format.toString();
   }
 
-  private String cvEntryFormat(AbstractEntry entry) {
+  private String formatSection(Section section) {
+    return formatSection(section, false);
+  }
+
+  private String formatSubSection(Section section) {
+    return formatSection(section, true);
+  }
+
+  private String formatCvEntry(AbstractEntry entry) {
     Duration duration = entry.getDuration();
     SimpleDate startDate = duration.getStartDate();
     SimpleDate endDate = duration.getEndDate();
