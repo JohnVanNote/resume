@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.apache.commons.lang3.builder.ToStringBuilder;
 
 @AllArgsConstructor
 @Getter
@@ -18,5 +19,10 @@ public abstract class AbstractEntry {
   protected String string3;
   protected String string4;
   protected String string5;
+
+  @Override
+  public String toString() {
+    return ToStringBuilder.reflectionToString(this);
+  }
 
 }
