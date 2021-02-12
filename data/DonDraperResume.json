@@ -34,12 +34,14 @@
       "string2" : "Institution",
       "string3" : "City",
       "string4" : "Grade",
-      "string5" : "Description",
+      "description" : {
+        "content" : "Description",
+        "descriptionItems" : null
+      },
       "degree" : "Degree",
       "institution" : "Institution",
-      "city" : "City",
       "gpa" : "Grade",
-      "description" : "Description"
+      "city" : "City"
     }, {
       "duration" : {
         "startDate" : {
@@ -55,21 +57,23 @@
       "string2" : "Institution",
       "string3" : "City",
       "string4" : "Grade",
-      "string5" : "Description",
+      "description" : {
+        "content" : "Description",
+        "descriptionItems" : null
+      },
       "degree" : "Degree",
       "institution" : "Institution",
-      "city" : "City",
       "gpa" : "Grade",
-      "description" : "Description"
+      "city" : "City"
     } ],
     "employmentEntries" : null,
-    "items" : null
+    "sectionItems" : null
   }, {
     "title" : "Master Thesis",
     "subSections" : null,
     "educationEntries" : null,
     "employmentEntries" : null,
-    "items" : [ {
+    "sectionItems" : [ {
       "emphasis" : true,
       "key" : "title",
       "value" : "Title"
@@ -103,12 +107,61 @@
         "string2" : "Sterling Cooper",
         "string3" : "New York, NY",
         "string4" : null,
-        "string5" : null,
+        "description" : {
+          "content" : "General description no longer than 1--2 lines. Detailed achievements:%",
+          "descriptionItems" : [ {
+            "content" : "Achievement 1",
+            "descriptionItems" : null
+          }, {
+            "content" : "Achievement 2, wit sub-achievements",
+            "descriptionItems" : [ {
+              "content" : "Sub-achievement (a)",
+              "descriptionItems" : null
+            }, {
+              "content" : "Sub-achievement (b)",
+              "descriptionItems" : [ {
+                "content" : "Sub-sub-achievement i",
+                "descriptionItems" : null
+              }, {
+                "content" : "Sub-sub-achievement ii",
+                "descriptionItems" : null
+              }, {
+                "content" : "Sub-sub-achievement iii)",
+                "descriptionItems" : null
+              } ]
+            }, {
+              "content" : "Sub-achievement (c)",
+              "descriptionItems" : null
+            } ]
+          }, {
+            "content" : "Achievement 2",
+            "descriptionItems" : null
+          } ]
+        },
         "jobTitle" : "Creative Director",
         "employer" : "Sterling Cooper",
         "address" : "New York, NY"
+      }, {
+        "duration" : {
+          "startDate" : {
+            "year" : 1955,
+            "month" : "APRIL"
+          },
+          "endDate" : {
+            "year" : 1958,
+            "month" : "NOVEMBER"
+          }
+        },
+        "string1" : "Boss",
+        "string2" : "Example",
+        "string3" : "Wherever",
+        "string4" : null,
+        "description" : null,
+        "jobTitle" : "Boss",
+        "employer" : "Example",
+        "address" : "Wherever"
       } ],
-      "items" : null
+      "sectionItems" : null
     }, {
       "title" : "Miscellaneous",
       "subSections" : null,
@@ -128,15 +181,15 @@
         "string2" : "WW2",
         "string3" : "Western Front",
         "string4" : null,
-        "string5" : null,
+        "description" : null,
         "jobTitle" : "Army",
         "employer" : "WW2",
         "address" : "Western Front"
       } ],
-      "items" : null
+      "sectionItems" : null
     } ],
     "educationEntries" : null,
     "employmentEntries" : null,
-    "items" : null
+    "sectionItems" : null
   } ]
 }

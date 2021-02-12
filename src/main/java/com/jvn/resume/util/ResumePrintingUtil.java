@@ -3,9 +3,11 @@ package com.jvn.resume.util;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.jvn.resume.model.Address;
 import com.jvn.resume.model.ContactInformation;
+import com.jvn.resume.model.Description;
+import com.jvn.resume.model.DescriptionItem;
 import com.jvn.resume.model.EducationEntry;
 import com.jvn.resume.model.EmploymentEntry;
-import com.jvn.resume.model.Item;
+import com.jvn.resume.model.SectionItem;
 import com.jvn.resume.model.Resume;
 import com.jvn.resume.model.Section;
 import com.jvn.resume.model.date.Duration;
@@ -45,34 +47,86 @@ public class ResumePrintingUtil {
     edEntry1.setInstitution("Institution");
     edEntry1.setCity("City");
     edEntry1.setGpa("Grade");
-    edEntry1.setDescription("Description");
+    edEntry1.setDescription(Description.builder().content("Description").build());
 
     Section education = Section.builder()
         .title("Education")
         .educationEntries(Arrays.asList(edEntry1, edEntry1))
         .build();
 
-    List<Item> items = new ArrayList<>();
-    items.add(Item.builder().emphasis(true).key("title").value("Title").build());
-    items.add(Item.builder().key("supervisors").value("Supervisors").build());
-    items.add(Item.builder().key("description").value("Short thesis abstract").build());
+    List<SectionItem> sectionItems = new ArrayList<>();
+    sectionItems.add(SectionItem.builder().emphasis(true).key("title").value("Title").build());
+    sectionItems.add(SectionItem.builder().key("supervisors").value("Supervisors").build());
+    sectionItems.add(SectionItem.builder().key("description").value("Short thesis abstract").build());
 
     Section thesis = Section.builder()
         .title("Master Thesis")
-        .items(items)
+        .sectionItems(sectionItems)
         .build();
 
-    EmploymentEntry vocationalEntry = new EmploymentEntry();
-    vocationalEntry.setDuration(Duration.builder()
+    EmploymentEntry vocationalEntry1 = new EmploymentEntry();
+    vocationalEntry1.setDuration(Duration.builder()
         .startDate(
             SimpleDate.builder().month(Month.JANUARY).year(1958).build()
         )
         .endDate(
             SimpleDate.builder().month(Month.DECEMBER).year(1963).build()
         ).build());
-    vocationalEntry.setJobTitle("Creative Director");
-    vocationalEntry.setEmployer("Sterling Cooper");
-    vocationalEntry.setAddress("New York, NY");
+    vocationalEntry1.setJobTitle("Creative Director");
+    vocationalEntry1.setEmployer("Sterling Cooper");
+    vocationalEntry1.setAddress("New York, NY");
+    vocationalEntry1.setDescription(Description.builder()
+        .content("General description no longer than 1--2 lines. Detailed achievements:%")
+        .descriptionItems(Arrays.asList(
+            DescriptionItem.builder()
+                .content("Achievement 1")
+                .build(),
+            DescriptionItem.builder()
+                .content("Achievement 2, with sub-achievements")
+                .descriptionItems(
+                    Arrays.asList(
+                        DescriptionItem.builder()
+                            .content("Sub-achievement (a)")
+                            .build(),
+                        DescriptionItem.builder()
+                            .content("Sub-achievement (b)")
+                            .descriptionItems(
+                                Arrays.asList(
+                                    DescriptionItem.builder()
+                                        .content("Sub-sub-achievement i")
+                                        .build(),
+                                    DescriptionItem.builder()
+                                        .content("Sub-sub-achievement ii")
+                                        .build(),
+                                    DescriptionItem.builder()
+                                        .content("Sub-sub-achievement iii)")
+                                        .build()
+                                )
+                            )
+                            .build(),
+                        DescriptionItem.builder()
+                            .content("Sub-achievement (c)")
+                            .build()
+                    )
+                )
+                .build(),
+            DescriptionItem.builder()
+                .content("Achievement 3")
+                .build()
+        ))
+        .build());
+
+    EmploymentEntry vocationalEntry2 = new EmploymentEntry();
+    vocationalEntry2.setDuration(Duration.builder()
+        .startDate(
+            SimpleDate.builder().month(Month.APRIL).year(1955).build()
+        )
+        .endDate(
+            SimpleDate.builder().month(Month.NOVEMBER).year(1958).build()
+        ).build());
+    vocationalEntry2.setJobTitle("Boss");
+    vocationalEntry2.setEmployer("Example");
+    vocationalEntry2.setAddress("Wherever");
 
     EmploymentEntry miscEntry = new EmploymentEntry();
     miscEntry.setDuration(Duration.builder()
@@ -91,7 +145,7 @@ public class ResumePrintingUtil {
         .subSections(Arrays.asList(
             Section.builder()
                 .title("Vocational")
-                .employmentEntries(Arrays.asList(vocationalEntry))
+                .employmentEntries(Arrays.asList(vocationalEntry1, vocationalEntry2))
                 .build(),
             Section.builder()
                 .title("Miscellaneous")

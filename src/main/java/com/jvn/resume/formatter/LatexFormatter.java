@@ -5,9 +5,11 @@ import static org.apache.commons.lang3.StringUtils.isNotEmpty;
 import com.jvn.resume.model.AbstractEntry;
 import com.jvn.resume.model.Address;
 import com.jvn.resume.model.ContactInformation;
+import com.jvn.resume.model.Description;
+import com.jvn.resume.model.DescriptionItem;
 import com.jvn.resume.model.EducationEntry;
 import com.jvn.resume.model.EmploymentEntry;
-import com.jvn.resume.model.Item;
+import com.jvn.resume.model.SectionItem;
 import com.jvn.resume.model.Resume;
 import com.jvn.resume.model.Section;
 import com.jvn.resume.model.date.Duration;
@@ -137,10 +139,10 @@ public class LatexFormatter implements Formatter {
       }
     }
 
-    List<Item> items = section.getItems();
-    if (items != null) {
-      for (Item item : items) {
-        format.append(formatItem(item));
+    List<SectionItem> sectionItems = section.getSectionItems();
+    if (sectionItems != null) {
+      for (SectionItem sectionItem : sectionItems) {
+        format.append(formatSectionItem(sectionItem));
       }
     }
 
@@ -170,7 +172,7 @@ public class LatexFormatter implements Formatter {
     String string2 = Objects.toString(entry.getString2(), "");
     String string3 = Objects.toString(entry.getString3(), "");
     String string4 = Objects.toString(entry.getString4(), "");
-    String description = Objects.toString(entry.getString5(), "");
+    Description description = entry.getDescription();
 
     StringBuilder format = new StringBuilder();
     format.append("\\cventry{")
@@ -192,19 +194,23 @@ public class LatexFormatter implements Formatter {
     }
     format.append("}{");
 
-    if (StringUtils.isNotEmpty(description)) {
-      format.append(description);
+    if (description != null) {
+      String content = description.getContent();
+      List<DescriptionItem> descriptionItems = description.getDescriptionItems();
+      format.append(content).append("%").append(LS);
+      format.append(formatDescriptionItems(descriptionItems));
     }
+
     format.append("}");
     format.append(LS);
     return format.toString();
   }
 
-  private String formatItem(Item item) {
+  private String formatSectionItem(SectionItem sectionItem) {
     StringBuilder format = new StringBuilder();
-    format.append("\\cvitem{").append(item.getKey()).append("}");
-    String valueStr = String.format("{%s}", item.getValue());
-    if (item.isEmphasis()) {
+    format.append("\\cvitem{").append(sectionItem.getKey()).append("}");
+    String valueStr = String.format("{%s}", sectionItem.getValue());
+    if (sectionItem.isEmphasis()) {
       format.append("{\\emph").append(valueStr).append("}");
     } else {
       format.append(valueStr);
@@ -213,6 +219,20 @@ public class LatexFormatter implements Formatter {
     return format.toString();
   }
 
+  private String formatDescriptionItems(List<DescriptionItem> descriptionItems) {
+    StringBuilder format = new StringBuilder();
+    if (descriptionItems != null && !descriptionItems.isEmpty()) {
+      format.append("\\begin{itemize}%").append(LS);
+      for (DescriptionItem item : descriptionItems) {
+        String content = item.getContent();
+        List<DescriptionItem> subDescriptionItems = item.getDescriptionItems();
+        format.append("\\item ").append(content).append(LS);
+        format.append(formatDescriptionItems(subDescriptionItems));
+      }
+      format.append("\\end{itemize}").append(LS);
+    }
+    return format.toString();
+  }
 
   @Getter
   public enum FontSize {

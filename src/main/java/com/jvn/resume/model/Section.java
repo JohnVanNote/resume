@@ -20,6 +20,6 @@ public class Section {
   private List<Section> subSections;
   private List<EducationEntry> educationEntries;
   private List<EmploymentEntry> employmentEntries;
-  private List<Item> items;
+  private List<SectionItem> sectionItems;
 
 }

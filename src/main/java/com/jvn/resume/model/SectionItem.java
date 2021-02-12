@@ -12,7 +12,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 @Getter
 @Setter
 @NoArgsConstructor
-public class Item {
+public class SectionItem {
 
   private boolean emphasis;
   private String key;

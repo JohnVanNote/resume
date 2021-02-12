@@ -37,12 +37,4 @@ public class EducationEntry extends AbstractEntry {
     return this.getString4();
   }
 
-  public void setDescription(String description) {
-    this.setString5(description);
-  }
-
-  public String getDescription() {
-    return this.getString5();
-  }
-
 }

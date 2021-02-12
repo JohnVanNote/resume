@@ -1,24 +1,22 @@
 package com.jvn.resume.model;
 
-import com.jvn.resume.model.date.Duration;
+import java.util.List;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
 @AllArgsConstructor
+@Builder
 @Getter
 @NoArgsConstructor
 @Setter
-public abstract class AbstractEntry {
+public class DescriptionItem {
 
-  private Duration duration;
-  protected String string1;
-  protected String string2;
-  protected String string3;
-  protected String string4;
-  protected Description description;
+  private String content;
+  private List<DescriptionItem> descriptionItems;
 
   @Override
   public String toString() {
