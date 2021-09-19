@@ -1,11 +1,13 @@
 package com.jvn.resume.model;
 
+import static org.apache.commons.lang3.StringUtils.isNotEmpty;
+import static org.apache.commons.lang3.builder.ToStringBuilder.reflectionToString;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.apache.commons.lang3.builder.ToStringBuilder;
 
 @AllArgsConstructor
 @Builder
@@ -17,10 +19,15 @@ public class SectionItem {
   private boolean emphasis;
   private String key;
   private String value;
+  private String comment;
+
+  public boolean hasComment() {
+    return isNotEmpty(comment);
+  }
 
   @Override
   public String toString() {
-    return ToStringBuilder.reflectionToString(this);
+    return reflectionToString(this);
   }
 
 }
