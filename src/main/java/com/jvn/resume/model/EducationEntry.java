@@ -2,7 +2,7 @@ package com.jvn.resume.model;
 
 public class EducationEntry extends AbstractEntry {
 
-  public EducationEntry(){
+  public EducationEntry() {
   }
 
   public void setDegree(String degree) {

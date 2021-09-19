@@ -1,8 +1,8 @@
 package com.jvn.resume.model.date;
 
+import com.jvn.test.util.ToStringUtil;
 import java.time.Month;
 import org.testng.annotations.Test;
-import com.jvn.test.util.ToStringUtil;
 
 public class Duration_UnitTest {
 
@@ -20,8 +20,8 @@ public class Duration_UnitTest {
     range.setStartDate(startDate);
     range.setEndDate(endDate);
 
-    ToStringUtil.assertToStringContains(range.toString(),
-        "APRIL", "1990", "MARCH", "2019");
+      ToStringUtil.assertToStringContains(range.toString(),
+              "APRIL", "1990", "MARCH", "2019");
   }
 
 }

@@ -1,5 +1,11 @@
 package com.jvn.resume.model.date;
 
+import static java.lang.String.format;
+import static org.apache.commons.lang3.StringUtils.capitalize;
+import static org.apache.commons.lang3.StringUtils.left;
+import static org.apache.commons.lang3.StringUtils.lowerCase;
+import static org.apache.commons.lang3.builder.ToStringBuilder.reflectionToString;
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import java.time.Month;
 import lombok.AllArgsConstructor;
@@ -7,8 +13,6 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.apache.commons.lang3.StringUtils;
-import org.apache.commons.lang3.builder.ToStringBuilder;
 
 @AllArgsConstructor
 @Builder
@@ -22,12 +26,12 @@ public class SimpleDate {
   private Month month;
 
   public String readable() {
-    return String.format("%s. %d", StringUtils.left(StringUtils.capitalize(StringUtils.lowerCase(month.toString())), 3), year);
+      return format("%s. %d", left(capitalize(lowerCase(month.toString())), 3), year);
   }
 
   @Override
   public String toString() {
-    return ToStringBuilder.reflectionToString(this);
+      return reflectionToString(this);
   }
 
 }

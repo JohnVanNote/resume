@@ -1,9 +1,7 @@
 package com.jvn.resume.printer;
 
 import com.jvn.resume.formatter.Formatter;
-
 import com.jvn.resume.model.Resume;
-import java.io.IOException;
 
 public class StdOutPrinter extends AbstractPrinter {
 
@@ -12,8 +10,8 @@ public class StdOutPrinter extends AbstractPrinter {
   }
 
   @Override
-  public void print(Formatter formatter) throws IOException {
-    System.out.println(formatter.format(resume));
+  public void print(Formatter formatter) {
+      System.out.println(formatter.format(resume));
   }
 
 }

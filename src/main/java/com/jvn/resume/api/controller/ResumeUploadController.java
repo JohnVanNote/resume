@@ -2,7 +2,6 @@ package com.jvn.resume.api.controller;
 
 import com.jvn.resume.api.storage.StorageFileNotFoundException;
 import com.jvn.resume.api.storage.StorageService;
-import java.io.IOException;
 import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.Resource;
@@ -31,11 +30,11 @@ public class ResumeUploadController {
   }
 
   @GetMapping("/")
-  public String listUploadedFiles(Model model) throws IOException {
-    model.addAttribute("files", storageService.loadAll().map(
-        path -> MvcUriComponentsBuilder.fromMethodName(ResumeUploadController.class,
-            "serveFile", path.getFileName().toString()).build().toUri().toString())
-        .collect(Collectors.toList()));
+  public String listUploadedFiles(Model model) {
+    model.addAttribute("files", storageService.loadAll()
+            .map(path -> MvcUriComponentsBuilder.fromMethodName(ResumeUploadController.class, "serveFile", path.getFileName().toString()).build().toUri()
+                    .toString())
+            .collect(Collectors.toList()));
     return "uploadForm";
   }
 

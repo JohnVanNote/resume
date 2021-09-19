@@ -10,6 +10,6 @@ import lombok.Setter;
 @AllArgsConstructor
 public abstract class AbstractPrinter implements Printer {
 
-  protected Resume resume;
+    protected Resume resume;
 
 }

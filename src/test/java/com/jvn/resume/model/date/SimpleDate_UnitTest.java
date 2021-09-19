@@ -1,9 +1,9 @@
 package com.jvn.resume.model.date;
 
+import com.jvn.test.util.ToStringUtil;
 import java.time.Month;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import com.jvn.test.util.ToStringUtil;
 
 public class SimpleDate_UnitTest {
 

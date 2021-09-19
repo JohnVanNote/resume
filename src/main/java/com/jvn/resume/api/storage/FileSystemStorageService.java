@@ -7,10 +7,10 @@ import com.jvn.resume.formatter.LatexFormatter.FontFamily;
 import com.jvn.resume.formatter.LatexFormatter.FontSize;
 import com.jvn.resume.formatter.LatexFormatter.PaperSize;
 import com.jvn.resume.formatter.LatexFormatter.Theme;
-import com.jvn.resume.printer.FileSystemPrinter;
-import com.jvn.resume.util.MapperFactory;
 import com.jvn.resume.model.Resume;
+import com.jvn.resume.printer.FileSystemPrinter;
 import com.jvn.resume.printer.Printer;
+import com.jvn.resume.util.MapperFactory;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.nio.charset.StandardCharsets;
@@ -74,9 +74,9 @@ public class FileSystemStorageService implements StorageService {
   @Override
   public Stream<Path> loadAll() {
     try {
-      return Files.walk(this.rootLocation, 1)
-          .filter(path -> !path.equals(this.rootLocation))
-          .map(path -> this.rootLocation.relativize(path));
+        return Files.walk(this.rootLocation, 1)
+                .filter(path -> !path.equals(this.rootLocation))
+                .map(this.rootLocation::relativize);
     } catch (IOException e) {
       throw new StorageException("Failed to read stored files", e);
     }

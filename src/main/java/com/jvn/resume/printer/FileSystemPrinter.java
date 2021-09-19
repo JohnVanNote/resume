@@ -3,7 +3,6 @@ package com.jvn.resume.printer;
 import com.jvn.resume.formatter.Formatter;
 import com.jvn.resume.model.Resume;
 import java.io.IOException;
-import java.io.Writer;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import lombok.AllArgsConstructor;

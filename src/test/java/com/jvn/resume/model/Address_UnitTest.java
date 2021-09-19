@@ -1,7 +1,7 @@
 package com.jvn.resume.model;
 
-import org.testng.annotations.Test;
 import com.jvn.test.util.ToStringUtil;
+import org.testng.annotations.Test;
 
 public class Address_UnitTest {
 

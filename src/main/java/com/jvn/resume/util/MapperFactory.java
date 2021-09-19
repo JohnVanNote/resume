@@ -1,5 +1,8 @@
 package com.jvn.resume.util;
 
+import static org.apache.commons.lang3.StringUtils.equalsIgnoreCase;
+import static org.apache.commons.lang3.builder.ToStringBuilder.reflectionToString;
+
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
@@ -7,8 +10,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import lombok.Getter;
-import org.apache.commons.lang3.StringUtils;
-import org.apache.commons.lang3.builder.ToStringBuilder;
 
 public class MapperFactory {
 
@@ -64,16 +65,16 @@ public class MapperFactory {
     public static FileType fromType(String filetype) {
       FileType theType = null;
       for (FileType type : FileType.values()) {
-        if (StringUtils.equalsIgnoreCase(type.getType(), filetype)) {
-          theType = type;
-        }
+          if (equalsIgnoreCase(type.getType(), filetype)) {
+              theType = type;
+          }
       }
       return theType;
     }
 
     @Override
     public String toString() {
-      return ToStringBuilder.reflectionToString(this);
+        return reflectionToString(this);
     }
   }
 

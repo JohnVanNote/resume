@@ -5,6 +5,6 @@ import java.io.IOException;
 
 public interface Printer {
 
-  void print(Formatter formatter) throws IOException;
+    void print(Formatter formatter) throws IOException;
 
 }

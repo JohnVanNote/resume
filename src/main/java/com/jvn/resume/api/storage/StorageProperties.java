@@ -1,6 +1,5 @@
 package com.jvn.resume.api.storage;
 
-
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 @ConfigurationProperties("storage")
