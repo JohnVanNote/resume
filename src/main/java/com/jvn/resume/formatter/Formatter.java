@@ -4,6 +4,6 @@ import com.jvn.resume.model.Resume;
 
 public interface Formatter {
 
-    String format(Resume resume);
+  String format(Resume resume);
 
 }
